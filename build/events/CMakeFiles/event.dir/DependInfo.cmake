@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/banaszewski/git/MTF/src/events/event_notifier.cpp" "/home/banaszewski/git/MTF/build/events/CMakeFiles/event.dir/event_notifier.cpp.o"
+  "/home/j_banaszewski/git/MTF/src/events/event_notifier.cpp" "/home/j_banaszewski/git/MTF/build/events/CMakeFiles/event.dir/event_notifier.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -14,8 +14,12 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/banaszewski/git/MTF/src/headers"
-  "/home/banaszewski/git/MTF/src/events"
+  "/home/j_banaszewski/git/MTF/src/headers"
+  "/home/j_banaszewski/git/MTF/src/gmock/gtest/include"
+  "/home/j_banaszewski/git/MTF/src/gmock/include"
+  "/home/j_banaszewski/git/MTF/src/gmock"
+  "/home/j_banaszewski/git/MTF/src/gmock/gtest"
+  "/home/j_banaszewski/git/MTF/src/events"
   )
 set(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 set(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

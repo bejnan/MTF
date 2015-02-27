@@ -34,27 +34,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/banaszewski/git/MTF/src
+CMAKE_SOURCE_DIR = /home/j_banaszewski/git/MTF/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/banaszewski/git/MTF/build
+CMAKE_BINARY_DIR = /home/j_banaszewski/git/MTF/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -64,23 +64,33 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles /home/banaszewski/git/MTF/build/results/CMakeFiles/progress.marks
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 results/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles /home/j_banaszewski/git/MTF/build/results/CMakeFiles/progress.marks
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 results/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 results/clean
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 results/clean
 .PHONY : clean
 
 # The main clean target
@@ -89,22 +99,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 results/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 results/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 results/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 results/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 results/CMakeFiles/result.dir/rule:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 results/CMakeFiles/result.dir/rule
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 results/CMakeFiles/result.dir/rule
 .PHONY : results/CMakeFiles/result.dir/rule
 
 # Convenience name for target.
@@ -113,7 +123,7 @@ result: results/CMakeFiles/result.dir/rule
 
 # fast build rule for target.
 result/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/build
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/build
 .PHONY : result/fast
 
 overall_result.o: overall_result.cpp.o
@@ -121,7 +131,7 @@ overall_result.o: overall_result.cpp.o
 
 # target to build an object file
 overall_result.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/overall_result.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/overall_result.cpp.o
 .PHONY : overall_result.cpp.o
 
 overall_result.i: overall_result.cpp.i
@@ -129,7 +139,7 @@ overall_result.i: overall_result.cpp.i
 
 # target to preprocess a source file
 overall_result.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/overall_result.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/overall_result.cpp.i
 .PHONY : overall_result.cpp.i
 
 overall_result.s: overall_result.cpp.s
@@ -137,7 +147,7 @@ overall_result.s: overall_result.cpp.s
 
 # target to generate assembly for a file
 overall_result.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/overall_result.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/overall_result.cpp.s
 .PHONY : overall_result.cpp.s
 
 result.o: result.cpp.o
@@ -145,7 +155,7 @@ result.o: result.cpp.o
 
 # target to build an object file
 result.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/result.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/result.cpp.o
 .PHONY : result.cpp.o
 
 result.i: result.cpp.i
@@ -153,7 +163,7 @@ result.i: result.cpp.i
 
 # target to preprocess a source file
 result.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/result.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/result.cpp.i
 .PHONY : result.cpp.i
 
 result.s: result.cpp.s
@@ -161,7 +171,7 @@ result.s: result.cpp.s
 
 # target to generate assembly for a file
 result.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/result.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f results/CMakeFiles/result.dir/build.make results/CMakeFiles/result.dir/result.cpp.s
 .PHONY : result.cpp.s
 
 # Help Target
@@ -172,6 +182,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... result"
 	@echo "... overall_result.o"
 	@echo "... overall_result.i"
@@ -190,6 +201,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

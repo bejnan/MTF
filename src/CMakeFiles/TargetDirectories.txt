@@ -1,0 +1,12 @@
+/home/j_banaszewski/git/MTF/src/events/CMakeFiles/event.dir
+/home/j_banaszewski/git/MTF/src/utils/CMakeFiles/util.dir
+/home/j_banaszewski/git/MTF/src/controller/CMakeFiles/configuration.dir
+/home/j_banaszewski/git/MTF/src/CMakeFiles/MTF.dir
+/home/j_banaszewski/git/MTF/src/data_managment/CMakeFiles/data_managment.dir
+/home/j_banaszewski/git/MTF/src/CMakeFiles/MTF_TEST.dir
+/home/j_banaszewski/git/MTF/src/algorithms/CMakeFiles/algorithm.dir
+/home/j_banaszewski/git/MTF/src/exceptions/CMakeFiles/exception.dir
+/home/j_banaszewski/git/MTF/src/elements/CMakeFiles/element.dir
+/home/j_banaszewski/git/MTF/src/tools/CMakeFiles/tool.dir
+/home/j_banaszewski/git/MTF/src/CMakeFiles/MTF_GTEST.dir
+/home/j_banaszewski/git/MTF/src/results/CMakeFiles/result.dir

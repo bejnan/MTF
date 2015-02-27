@@ -34,27 +34,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/banaszewski/git/MTF/src
+CMAKE_SOURCE_DIR = /home/j_banaszewski/git/MTF/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/banaszewski/git/MTF/build
+CMAKE_BINARY_DIR = /home/j_banaszewski/git/MTF/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -64,23 +64,33 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles /home/banaszewski/git/MTF/build/tools/CMakeFiles/progress.marks
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 tools/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles /home/j_banaszewski/git/MTF/build/tools/CMakeFiles/progress.marks
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 tools/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 tools/clean
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 tools/clean
 .PHONY : clean
 
 # The main clean target
@@ -89,22 +99,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 tools/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tools/CMakeFiles/tool.dir/rule:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tool.dir/rule
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 tools/CMakeFiles/tool.dir/rule
 .PHONY : tools/CMakeFiles/tool.dir/rule
 
 # Convenience name for target.
@@ -113,7 +123,7 @@ tool: tools/CMakeFiles/tool.dir/rule
 
 # fast build rule for target.
 tool/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/build
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/build
 .PHONY : tool/fast
 
 judges/deviation_judge.o: judges/deviation_judge.cpp.o
@@ -121,7 +131,7 @@ judges/deviation_judge.o: judges/deviation_judge.cpp.o
 
 # target to build an object file
 judges/deviation_judge.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.o
 .PHONY : judges/deviation_judge.cpp.o
 
 judges/deviation_judge.i: judges/deviation_judge.cpp.i
@@ -129,7 +139,7 @@ judges/deviation_judge.i: judges/deviation_judge.cpp.i
 
 # target to preprocess a source file
 judges/deviation_judge.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.i
 .PHONY : judges/deviation_judge.cpp.i
 
 judges/deviation_judge.s: judges/deviation_judge.cpp.s
@@ -137,7 +147,7 @@ judges/deviation_judge.s: judges/deviation_judge.cpp.s
 
 # target to generate assembly for a file
 judges/deviation_judge.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.s
 .PHONY : judges/deviation_judge.cpp.s
 
 judges/tester.o: judges/tester.cpp.o
@@ -145,7 +155,7 @@ judges/tester.o: judges/tester.cpp.o
 
 # target to build an object file
 judges/tester.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/judges/tester.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/judges/tester.cpp.o
 .PHONY : judges/tester.cpp.o
 
 judges/tester.i: judges/tester.cpp.i
@@ -153,7 +163,7 @@ judges/tester.i: judges/tester.cpp.i
 
 # target to preprocess a source file
 judges/tester.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/judges/tester.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/judges/tester.cpp.i
 .PHONY : judges/tester.cpp.i
 
 judges/tester.s: judges/tester.cpp.s
@@ -161,7 +171,7 @@ judges/tester.s: judges/tester.cpp.s
 
 # target to generate assembly for a file
 judges/tester.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/judges/tester.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/judges/tester.cpp.s
 .PHONY : judges/tester.cpp.s
 
 processor.o: processor.cpp.o
@@ -169,7 +179,7 @@ processor.o: processor.cpp.o
 
 # target to build an object file
 processor.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/processor.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/processor.cpp.o
 .PHONY : processor.cpp.o
 
 processor.i: processor.cpp.i
@@ -177,7 +187,7 @@ processor.i: processor.cpp.i
 
 # target to preprocess a source file
 processor.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/processor.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/processor.cpp.i
 .PHONY : processor.cpp.i
 
 processor.s: processor.cpp.s
@@ -185,7 +195,7 @@ processor.s: processor.cpp.s
 
 # target to generate assembly for a file
 processor.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/processor.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/processor.cpp.s
 .PHONY : processor.cpp.s
 
 processor_factory.o: processor_factory.cpp.o
@@ -193,7 +203,7 @@ processor_factory.o: processor_factory.cpp.o
 
 # target to build an object file
 processor_factory.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/processor_factory.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/processor_factory.cpp.o
 .PHONY : processor_factory.cpp.o
 
 processor_factory.i: processor_factory.cpp.i
@@ -201,7 +211,7 @@ processor_factory.i: processor_factory.cpp.i
 
 # target to preprocess a source file
 processor_factory.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/processor_factory.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/processor_factory.cpp.i
 .PHONY : processor_factory.cpp.i
 
 processor_factory.s: processor_factory.cpp.s
@@ -209,7 +219,7 @@ processor_factory.s: processor_factory.cpp.s
 
 # target to generate assembly for a file
 processor_factory.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/processor_factory.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f tools/CMakeFiles/tool.dir/build.make tools/CMakeFiles/tool.dir/processor_factory.cpp.s
 .PHONY : processor_factory.cpp.s
 
 # Help Target
@@ -220,6 +230,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... tool"
 	@echo "... judges/deviation_judge.o"
 	@echo "... judges/deviation_judge.i"
@@ -244,6 +255,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

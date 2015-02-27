@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/MTF_GTEST.dir/gtest/gtest_main.cpp.o  -o MTF_GTEST -rdynamic gmock/gtest/libgtest.a gmock/gtest/libgtest_main.a gmock/gtest/libgtest.a -lpthread 

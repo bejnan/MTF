@@ -26,19 +26,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/banaszewski/git/MTF/src
+CMAKE_SOURCE_DIR = /home/j_banaszewski/git/MTF/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/banaszewski/git/MTF/build
+CMAKE_BINARY_DIR = /home/j_banaszewski/git/MTF/build
 
 # Include any dependencies generated for this target.
 include tools/CMakeFiles/tool.dir/depend.make
@@ -50,18 +50,18 @@ include tools/CMakeFiles/tool.dir/progress.make
 include tools/CMakeFiles/tool.dir/flags.make
 
 tools/CMakeFiles/tool.dir/processor_factory.cpp.o: tools/CMakeFiles/tool.dir/flags.make
-tools/CMakeFiles/tool.dir/processor_factory.cpp.o: /home/banaszewski/git/MTF/src/tools/processor_factory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_1)
+tools/CMakeFiles/tool.dir/processor_factory.cpp.o: /home/j_banaszewski/git/MTF/src/tools/processor_factory.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/CMakeFiles/tool.dir/processor_factory.cpp.o"
-	cd /home/banaszewski/git/MTF/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tool.dir/processor_factory.cpp.o -c /home/banaszewski/git/MTF/src/tools/processor_factory.cpp
+	cd /home/j_banaszewski/git/MTF/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tool.dir/processor_factory.cpp.o -c /home/j_banaszewski/git/MTF/src/tools/processor_factory.cpp
 
 tools/CMakeFiles/tool.dir/processor_factory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tool.dir/processor_factory.cpp.i"
-	cd /home/banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/tools/processor_factory.cpp > CMakeFiles/tool.dir/processor_factory.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/tools/processor_factory.cpp > CMakeFiles/tool.dir/processor_factory.cpp.i
 
 tools/CMakeFiles/tool.dir/processor_factory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tool.dir/processor_factory.cpp.s"
-	cd /home/banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/tools/processor_factory.cpp -o CMakeFiles/tool.dir/processor_factory.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/tools/processor_factory.cpp -o CMakeFiles/tool.dir/processor_factory.cpp.s
 
 tools/CMakeFiles/tool.dir/processor_factory.cpp.o.requires:
 .PHONY : tools/CMakeFiles/tool.dir/processor_factory.cpp.o.requires
@@ -73,18 +73,18 @@ tools/CMakeFiles/tool.dir/processor_factory.cpp.o.provides: tools/CMakeFiles/too
 tools/CMakeFiles/tool.dir/processor_factory.cpp.o.provides.build: tools/CMakeFiles/tool.dir/processor_factory.cpp.o
 
 tools/CMakeFiles/tool.dir/processor.cpp.o: tools/CMakeFiles/tool.dir/flags.make
-tools/CMakeFiles/tool.dir/processor.cpp.o: /home/banaszewski/git/MTF/src/tools/processor.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_2)
+tools/CMakeFiles/tool.dir/processor.cpp.o: /home/j_banaszewski/git/MTF/src/tools/processor.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/CMakeFiles/tool.dir/processor.cpp.o"
-	cd /home/banaszewski/git/MTF/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tool.dir/processor.cpp.o -c /home/banaszewski/git/MTF/src/tools/processor.cpp
+	cd /home/j_banaszewski/git/MTF/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tool.dir/processor.cpp.o -c /home/j_banaszewski/git/MTF/src/tools/processor.cpp
 
 tools/CMakeFiles/tool.dir/processor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tool.dir/processor.cpp.i"
-	cd /home/banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/tools/processor.cpp > CMakeFiles/tool.dir/processor.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/tools/processor.cpp > CMakeFiles/tool.dir/processor.cpp.i
 
 tools/CMakeFiles/tool.dir/processor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tool.dir/processor.cpp.s"
-	cd /home/banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/tools/processor.cpp -o CMakeFiles/tool.dir/processor.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/tools/processor.cpp -o CMakeFiles/tool.dir/processor.cpp.s
 
 tools/CMakeFiles/tool.dir/processor.cpp.o.requires:
 .PHONY : tools/CMakeFiles/tool.dir/processor.cpp.o.requires
@@ -96,18 +96,18 @@ tools/CMakeFiles/tool.dir/processor.cpp.o.provides: tools/CMakeFiles/tool.dir/pr
 tools/CMakeFiles/tool.dir/processor.cpp.o.provides.build: tools/CMakeFiles/tool.dir/processor.cpp.o
 
 tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.o: tools/CMakeFiles/tool.dir/flags.make
-tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.o: /home/banaszewski/git/MTF/src/tools/judges/deviation_judge.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_3)
+tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.o: /home/j_banaszewski/git/MTF/src/tools/judges/deviation_judge.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.o"
-	cd /home/banaszewski/git/MTF/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tool.dir/judges/deviation_judge.cpp.o -c /home/banaszewski/git/MTF/src/tools/judges/deviation_judge.cpp
+	cd /home/j_banaszewski/git/MTF/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tool.dir/judges/deviation_judge.cpp.o -c /home/j_banaszewski/git/MTF/src/tools/judges/deviation_judge.cpp
 
 tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tool.dir/judges/deviation_judge.cpp.i"
-	cd /home/banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/tools/judges/deviation_judge.cpp > CMakeFiles/tool.dir/judges/deviation_judge.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/tools/judges/deviation_judge.cpp > CMakeFiles/tool.dir/judges/deviation_judge.cpp.i
 
 tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tool.dir/judges/deviation_judge.cpp.s"
-	cd /home/banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/tools/judges/deviation_judge.cpp -o CMakeFiles/tool.dir/judges/deviation_judge.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/tools/judges/deviation_judge.cpp -o CMakeFiles/tool.dir/judges/deviation_judge.cpp.s
 
 tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.o.requires:
 .PHONY : tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.o.requires
@@ -119,18 +119,18 @@ tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.o.provides: tools/CMakeFile
 tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.o.provides.build: tools/CMakeFiles/tool.dir/judges/deviation_judge.cpp.o
 
 tools/CMakeFiles/tool.dir/judges/tester.cpp.o: tools/CMakeFiles/tool.dir/flags.make
-tools/CMakeFiles/tool.dir/judges/tester.cpp.o: /home/banaszewski/git/MTF/src/tools/judges/tester.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_4)
+tools/CMakeFiles/tool.dir/judges/tester.cpp.o: /home/j_banaszewski/git/MTF/src/tools/judges/tester.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tools/CMakeFiles/tool.dir/judges/tester.cpp.o"
-	cd /home/banaszewski/git/MTF/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tool.dir/judges/tester.cpp.o -c /home/banaszewski/git/MTF/src/tools/judges/tester.cpp
+	cd /home/j_banaszewski/git/MTF/build/tools && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tool.dir/judges/tester.cpp.o -c /home/j_banaszewski/git/MTF/src/tools/judges/tester.cpp
 
 tools/CMakeFiles/tool.dir/judges/tester.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tool.dir/judges/tester.cpp.i"
-	cd /home/banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/tools/judges/tester.cpp > CMakeFiles/tool.dir/judges/tester.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/tools/judges/tester.cpp > CMakeFiles/tool.dir/judges/tester.cpp.i
 
 tools/CMakeFiles/tool.dir/judges/tester.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tool.dir/judges/tester.cpp.s"
-	cd /home/banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/tools/judges/tester.cpp -o CMakeFiles/tool.dir/judges/tester.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/tools && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/tools/judges/tester.cpp -o CMakeFiles/tool.dir/judges/tester.cpp.s
 
 tools/CMakeFiles/tool.dir/judges/tester.cpp.o.requires:
 .PHONY : tools/CMakeFiles/tool.dir/judges/tester.cpp.o.requires
@@ -158,8 +158,8 @@ tools/libtool.a: tools/CMakeFiles/tool.dir/judges/tester.cpp.o
 tools/libtool.a: tools/CMakeFiles/tool.dir/build.make
 tools/libtool.a: tools/CMakeFiles/tool.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libtool.a"
-	cd /home/banaszewski/git/MTF/build/tools && $(CMAKE_COMMAND) -P CMakeFiles/tool.dir/cmake_clean_target.cmake
-	cd /home/banaszewski/git/MTF/build/tools && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tool.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/j_banaszewski/git/MTF/build/tools && $(CMAKE_COMMAND) -P CMakeFiles/tool.dir/cmake_clean_target.cmake
+	cd /home/j_banaszewski/git/MTF/build/tools && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tool.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tools/CMakeFiles/tool.dir/build: tools/libtool.a
@@ -172,10 +172,10 @@ tools/CMakeFiles/tool.dir/requires: tools/CMakeFiles/tool.dir/judges/tester.cpp.
 .PHONY : tools/CMakeFiles/tool.dir/requires
 
 tools/CMakeFiles/tool.dir/clean:
-	cd /home/banaszewski/git/MTF/build/tools && $(CMAKE_COMMAND) -P CMakeFiles/tool.dir/cmake_clean.cmake
+	cd /home/j_banaszewski/git/MTF/build/tools && $(CMAKE_COMMAND) -P CMakeFiles/tool.dir/cmake_clean.cmake
 .PHONY : tools/CMakeFiles/tool.dir/clean
 
 tools/CMakeFiles/tool.dir/depend:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/banaszewski/git/MTF/src /home/banaszewski/git/MTF/src/tools /home/banaszewski/git/MTF/build /home/banaszewski/git/MTF/build/tools /home/banaszewski/git/MTF/build/tools/CMakeFiles/tool.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/j_banaszewski/git/MTF/src /home/j_banaszewski/git/MTF/src/tools /home/j_banaszewski/git/MTF/build /home/j_banaszewski/git/MTF/build/tools /home/j_banaszewski/git/MTF/build/tools/CMakeFiles/tool.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tools/CMakeFiles/tool.dir/depend
 

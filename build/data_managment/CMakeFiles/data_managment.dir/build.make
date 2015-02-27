@@ -26,19 +26,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/banaszewski/git/MTF/src
+CMAKE_SOURCE_DIR = /home/j_banaszewski/git/MTF/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/banaszewski/git/MTF/build
+CMAKE_BINARY_DIR = /home/j_banaszewski/git/MTF/build
 
 # Include any dependencies generated for this target.
 include data_managment/CMakeFiles/data_managment.dir/depend.make
@@ -50,18 +50,18 @@ include data_managment/CMakeFiles/data_managment.dir/progress.make
 include data_managment/CMakeFiles/data_managment.dir/flags.make
 
 data_managment/CMakeFiles/data_managment.dir/database.cpp.o: data_managment/CMakeFiles/data_managment.dir/flags.make
-data_managment/CMakeFiles/data_managment.dir/database.cpp.o: /home/banaszewski/git/MTF/src/data_managment/database.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_1)
+data_managment/CMakeFiles/data_managment.dir/database.cpp.o: /home/j_banaszewski/git/MTF/src/data_managment/database.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object data_managment/CMakeFiles/data_managment.dir/database.cpp.o"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/database.cpp.o -c /home/banaszewski/git/MTF/src/data_managment/database.cpp
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/database.cpp.o -c /home/j_banaszewski/git/MTF/src/data_managment/database.cpp
 
 data_managment/CMakeFiles/data_managment.dir/database.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/data_managment.dir/database.cpp.i"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/data_managment/database.cpp > CMakeFiles/data_managment.dir/database.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/data_managment/database.cpp > CMakeFiles/data_managment.dir/database.cpp.i
 
 data_managment/CMakeFiles/data_managment.dir/database.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/data_managment.dir/database.cpp.s"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/data_managment/database.cpp -o CMakeFiles/data_managment.dir/database.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/data_managment/database.cpp -o CMakeFiles/data_managment.dir/database.cpp.s
 
 data_managment/CMakeFiles/data_managment.dir/database.cpp.o.requires:
 .PHONY : data_managment/CMakeFiles/data_managment.dir/database.cpp.o.requires
@@ -73,18 +73,18 @@ data_managment/CMakeFiles/data_managment.dir/database.cpp.o.provides: data_manag
 data_managment/CMakeFiles/data_managment.dir/database.cpp.o.provides.build: data_managment/CMakeFiles/data_managment.dir/database.cpp.o
 
 data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o: data_managment/CMakeFiles/data_managment.dir/flags.make
-data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o: /home/banaszewski/git/MTF/src/data_managment/data_output/csv_data_output.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_2)
+data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o: /home/j_banaszewski/git/MTF/src/data_managment/data_output/csv_data_output.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o -c /home/banaszewski/git/MTF/src/data_managment/data_output/csv_data_output.cpp
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o -c /home/j_banaszewski/git/MTF/src/data_managment/data_output/csv_data_output.cpp
 
 data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.i"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/data_managment/data_output/csv_data_output.cpp > CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/data_managment/data_output/csv_data_output.cpp > CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.i
 
 data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.s"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/data_managment/data_output/csv_data_output.cpp -o CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/data_managment/data_output/csv_data_output.cpp -o CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.s
 
 data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o.requires:
 .PHONY : data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o.requires
@@ -96,18 +96,18 @@ data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o.p
 data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o.provides.build: data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o
 
 data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.o: data_managment/CMakeFiles/data_managment.dir/flags.make
-data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.o: /home/banaszewski/git/MTF/src/data_managment/data_output/csv_file_data_output.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_3)
+data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.o: /home/j_banaszewski/git/MTF/src/data_managment/data_output/csv_file_data_output.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.o"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.o -c /home/banaszewski/git/MTF/src/data_managment/data_output/csv_file_data_output.cpp
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.o -c /home/j_banaszewski/git/MTF/src/data_managment/data_output/csv_file_data_output.cpp
 
 data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.i"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/data_managment/data_output/csv_file_data_output.cpp > CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/data_managment/data_output/csv_file_data_output.cpp > CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.i
 
 data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.s"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/data_managment/data_output/csv_file_data_output.cpp -o CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/data_managment/data_output/csv_file_data_output.cpp -o CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.s
 
 data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.o.requires:
 .PHONY : data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.o.requires
@@ -119,18 +119,18 @@ data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cp
 data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.o.provides.build: data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.o
 
 data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o: data_managment/CMakeFiles/data_managment.dir/flags.make
-data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o: /home/banaszewski/git/MTF/src/data_managment/data_output/file_data_output.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_4)
+data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o: /home/j_banaszewski/git/MTF/src/data_managment/data_output/file_data_output.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o -c /home/banaszewski/git/MTF/src/data_managment/data_output/file_data_output.cpp
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o -c /home/j_banaszewski/git/MTF/src/data_managment/data_output/file_data_output.cpp
 
 data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.i"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/data_managment/data_output/file_data_output.cpp > CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/data_managment/data_output/file_data_output.cpp > CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.i
 
 data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.s"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/data_managment/data_output/file_data_output.cpp -o CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/data_managment/data_output/file_data_output.cpp -o CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.s
 
 data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o.requires:
 .PHONY : data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o.requires
@@ -142,18 +142,18 @@ data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o.
 data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o.provides.build: data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o
 
 data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.o: data_managment/CMakeFiles/data_managment.dir/flags.make
-data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.o: /home/banaszewski/git/MTF/src/data_managment/data_provider/file_data_provider.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_5)
+data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.o: /home/j_banaszewski/git/MTF/src/data_managment/data_provider/file_data_provider.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.o"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.o -c /home/banaszewski/git/MTF/src/data_managment/data_provider/file_data_provider.cpp
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.o -c /home/j_banaszewski/git/MTF/src/data_managment/data_provider/file_data_provider.cpp
 
 data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.i"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/data_managment/data_provider/file_data_provider.cpp > CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/data_managment/data_provider/file_data_provider.cpp > CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.i
 
 data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.s"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/data_managment/data_provider/file_data_provider.cpp -o CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/data_managment/data_provider/file_data_provider.cpp -o CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.s
 
 data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.o.requires:
 .PHONY : data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.o.requires
@@ -165,18 +165,18 @@ data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cp
 data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.o.provides.build: data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.o
 
 data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.o: data_managment/CMakeFiles/data_managment.dir/flags.make
-data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.o: /home/banaszewski/git/MTF/src/data_managment/results_collectors/data_collector.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_6)
+data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.o: /home/j_banaszewski/git/MTF/src/data_managment/results_collectors/data_collector.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.o"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.o -c /home/banaszewski/git/MTF/src/data_managment/results_collectors/data_collector.cpp
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.o -c /home/j_banaszewski/git/MTF/src/data_managment/results_collectors/data_collector.cpp
 
 data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.i"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/data_managment/results_collectors/data_collector.cpp > CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/data_managment/results_collectors/data_collector.cpp > CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.i
 
 data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.s"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/data_managment/results_collectors/data_collector.cpp -o CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/data_managment/results_collectors/data_collector.cpp -o CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.s
 
 data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.o.requires:
 .PHONY : data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.o.requires
@@ -188,18 +188,18 @@ data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.c
 data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.o.provides.build: data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.o
 
 data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.o: data_managment/CMakeFiles/data_managment.dir/flags.make
-data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.o: /home/banaszewski/git/MTF/src/data_managment/results_collectors/judge_collector.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_7)
+data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.o: /home/j_banaszewski/git/MTF/src/data_managment/results_collectors/judge_collector.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.o"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.o -c /home/banaszewski/git/MTF/src/data_managment/results_collectors/judge_collector.cpp
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.o -c /home/j_banaszewski/git/MTF/src/data_managment/results_collectors/judge_collector.cpp
 
 data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.i"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/data_managment/results_collectors/judge_collector.cpp > CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/data_managment/results_collectors/judge_collector.cpp > CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.i
 
 data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.s"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/data_managment/results_collectors/judge_collector.cpp -o CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/data_managment/results_collectors/judge_collector.cpp -o CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.s
 
 data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.o.requires:
 .PHONY : data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.o.requires
@@ -211,18 +211,18 @@ data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.
 data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.o.provides.build: data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.o
 
 data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.o: data_managment/CMakeFiles/data_managment.dir/flags.make
-data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.o: /home/banaszewski/git/MTF/src/data_managment/results_collectors/result_collector.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_8)
+data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.o: /home/j_banaszewski/git/MTF/src/data_managment/results_collectors/result_collector.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.o"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.o -c /home/banaszewski/git/MTF/src/data_managment/results_collectors/result_collector.cpp
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.o -c /home/j_banaszewski/git/MTF/src/data_managment/results_collectors/result_collector.cpp
 
 data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.i"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/data_managment/results_collectors/result_collector.cpp > CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/data_managment/results_collectors/result_collector.cpp > CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.i
 
 data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.s"
-	cd /home/banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/data_managment/results_collectors/result_collector.cpp -o CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/data_managment && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/data_managment/results_collectors/result_collector.cpp -o CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.s
 
 data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.o.requires:
 .PHONY : data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.o.requires
@@ -258,8 +258,8 @@ data_managment/libdata_managment.a: data_managment/CMakeFiles/data_managment.dir
 data_managment/libdata_managment.a: data_managment/CMakeFiles/data_managment.dir/build.make
 data_managment/libdata_managment.a: data_managment/CMakeFiles/data_managment.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libdata_managment.a"
-	cd /home/banaszewski/git/MTF/build/data_managment && $(CMAKE_COMMAND) -P CMakeFiles/data_managment.dir/cmake_clean_target.cmake
-	cd /home/banaszewski/git/MTF/build/data_managment && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/data_managment.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/j_banaszewski/git/MTF/build/data_managment && $(CMAKE_COMMAND) -P CMakeFiles/data_managment.dir/cmake_clean_target.cmake
+	cd /home/j_banaszewski/git/MTF/build/data_managment && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/data_managment.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 data_managment/CMakeFiles/data_managment.dir/build: data_managment/libdata_managment.a
@@ -276,10 +276,10 @@ data_managment/CMakeFiles/data_managment.dir/requires: data_managment/CMakeFiles
 .PHONY : data_managment/CMakeFiles/data_managment.dir/requires
 
 data_managment/CMakeFiles/data_managment.dir/clean:
-	cd /home/banaszewski/git/MTF/build/data_managment && $(CMAKE_COMMAND) -P CMakeFiles/data_managment.dir/cmake_clean.cmake
+	cd /home/j_banaszewski/git/MTF/build/data_managment && $(CMAKE_COMMAND) -P CMakeFiles/data_managment.dir/cmake_clean.cmake
 .PHONY : data_managment/CMakeFiles/data_managment.dir/clean
 
 data_managment/CMakeFiles/data_managment.dir/depend:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/banaszewski/git/MTF/src /home/banaszewski/git/MTF/src/data_managment /home/banaszewski/git/MTF/build /home/banaszewski/git/MTF/build/data_managment /home/banaszewski/git/MTF/build/data_managment/CMakeFiles/data_managment.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/j_banaszewski/git/MTF/src /home/j_banaszewski/git/MTF/src/data_managment /home/j_banaszewski/git/MTF/build /home/j_banaszewski/git/MTF/build/data_managment /home/j_banaszewski/git/MTF/build/data_managment/CMakeFiles/data_managment.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : data_managment/CMakeFiles/data_managment.dir/depend
 

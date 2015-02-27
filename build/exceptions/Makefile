@@ -34,27 +34,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/banaszewski/git/MTF/src
+CMAKE_SOURCE_DIR = /home/j_banaszewski/git/MTF/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/banaszewski/git/MTF/build
+CMAKE_BINARY_DIR = /home/j_banaszewski/git/MTF/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -64,23 +64,33 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles /home/banaszewski/git/MTF/build/exceptions/CMakeFiles/progress.marks
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 exceptions/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles /home/j_banaszewski/git/MTF/build/exceptions/CMakeFiles/progress.marks
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 exceptions/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 exceptions/clean
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 exceptions/clean
 .PHONY : clean
 
 # The main clean target
@@ -89,22 +99,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 exceptions/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 exceptions/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 exceptions/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 exceptions/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 exceptions/CMakeFiles/exception.dir/rule:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 exceptions/CMakeFiles/exception.dir/rule
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 exceptions/CMakeFiles/exception.dir/rule
 .PHONY : exceptions/CMakeFiles/exception.dir/rule
 
 # Convenience name for target.
@@ -113,7 +123,7 @@ exception: exceptions/CMakeFiles/exception.dir/rule
 
 # fast build rule for target.
 exception/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/build
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/build
 .PHONY : exception/fast
 
 data_provider_exception.o: data_provider_exception.cpp.o
@@ -121,7 +131,7 @@ data_provider_exception.o: data_provider_exception.cpp.o
 
 # target to build an object file
 data_provider_exception.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o
 .PHONY : data_provider_exception.cpp.o
 
 data_provider_exception.i: data_provider_exception.cpp.i
@@ -129,7 +139,7 @@ data_provider_exception.i: data_provider_exception.cpp.i
 
 # target to preprocess a source file
 data_provider_exception.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.i
 .PHONY : data_provider_exception.cpp.i
 
 data_provider_exception.s: data_provider_exception.cpp.s
@@ -137,7 +147,7 @@ data_provider_exception.s: data_provider_exception.cpp.s
 
 # target to generate assembly for a file
 data_provider_exception.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.s
 .PHONY : data_provider_exception.cpp.s
 
 database_exception.o: database_exception.cpp.o
@@ -145,7 +155,7 @@ database_exception.o: database_exception.cpp.o
 
 # target to build an object file
 database_exception.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/database_exception.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/database_exception.cpp.o
 .PHONY : database_exception.cpp.o
 
 database_exception.i: database_exception.cpp.i
@@ -153,7 +163,7 @@ database_exception.i: database_exception.cpp.i
 
 # target to preprocess a source file
 database_exception.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/database_exception.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/database_exception.cpp.i
 .PHONY : database_exception.cpp.i
 
 database_exception.s: database_exception.cpp.s
@@ -161,7 +171,7 @@ database_exception.s: database_exception.cpp.s
 
 # target to generate assembly for a file
 database_exception.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/database_exception.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/database_exception.cpp.s
 .PHONY : database_exception.cpp.s
 
 element_already_exists.o: element_already_exists.cpp.o
@@ -169,7 +179,7 @@ element_already_exists.o: element_already_exists.cpp.o
 
 # target to build an object file
 element_already_exists.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o
 .PHONY : element_already_exists.cpp.o
 
 element_already_exists.i: element_already_exists.cpp.i
@@ -177,7 +187,7 @@ element_already_exists.i: element_already_exists.cpp.i
 
 # target to preprocess a source file
 element_already_exists.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.i
 .PHONY : element_already_exists.cpp.i
 
 element_already_exists.s: element_already_exists.cpp.s
@@ -185,7 +195,7 @@ element_already_exists.s: element_already_exists.cpp.s
 
 # target to generate assembly for a file
 element_already_exists.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.s
 .PHONY : element_already_exists.cpp.s
 
 end_of_file_exception.o: end_of_file_exception.cpp.o
@@ -193,7 +203,7 @@ end_of_file_exception.o: end_of_file_exception.cpp.o
 
 # target to build an object file
 end_of_file_exception.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o
 .PHONY : end_of_file_exception.cpp.o
 
 end_of_file_exception.i: end_of_file_exception.cpp.i
@@ -201,7 +211,7 @@ end_of_file_exception.i: end_of_file_exception.cpp.i
 
 # target to preprocess a source file
 end_of_file_exception.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.i
 .PHONY : end_of_file_exception.cpp.i
 
 end_of_file_exception.s: end_of_file_exception.cpp.s
@@ -209,7 +219,7 @@ end_of_file_exception.s: end_of_file_exception.cpp.s
 
 # target to generate assembly for a file
 end_of_file_exception.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.s
 .PHONY : end_of_file_exception.cpp.s
 
 file_path_exception.o: file_path_exception.cpp.o
@@ -217,7 +227,7 @@ file_path_exception.o: file_path_exception.cpp.o
 
 # target to build an object file
 file_path_exception.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o
 .PHONY : file_path_exception.cpp.o
 
 file_path_exception.i: file_path_exception.cpp.i
@@ -225,7 +235,7 @@ file_path_exception.i: file_path_exception.cpp.i
 
 # target to preprocess a source file
 file_path_exception.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.i
 .PHONY : file_path_exception.cpp.i
 
 file_path_exception.s: file_path_exception.cpp.s
@@ -233,7 +243,7 @@ file_path_exception.s: file_path_exception.cpp.s
 
 # target to generate assembly for a file
 file_path_exception.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.s
 .PHONY : file_path_exception.cpp.s
 
 invalid_index_exception.o: invalid_index_exception.cpp.o
@@ -241,7 +251,7 @@ invalid_index_exception.o: invalid_index_exception.cpp.o
 
 # target to build an object file
 invalid_index_exception.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o
 .PHONY : invalid_index_exception.cpp.o
 
 invalid_index_exception.i: invalid_index_exception.cpp.i
@@ -249,7 +259,7 @@ invalid_index_exception.i: invalid_index_exception.cpp.i
 
 # target to preprocess a source file
 invalid_index_exception.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.i
 .PHONY : invalid_index_exception.cpp.i
 
 invalid_index_exception.s: invalid_index_exception.cpp.s
@@ -257,7 +267,7 @@ invalid_index_exception.s: invalid_index_exception.cpp.s
 
 # target to generate assembly for a file
 invalid_index_exception.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.s
 .PHONY : invalid_index_exception.cpp.s
 
 invalid_name_exception.o: invalid_name_exception.cpp.o
@@ -265,7 +275,7 @@ invalid_name_exception.o: invalid_name_exception.cpp.o
 
 # target to build an object file
 invalid_name_exception.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o
 .PHONY : invalid_name_exception.cpp.o
 
 invalid_name_exception.i: invalid_name_exception.cpp.i
@@ -273,7 +283,7 @@ invalid_name_exception.i: invalid_name_exception.cpp.i
 
 # target to preprocess a source file
 invalid_name_exception.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.i
 .PHONY : invalid_name_exception.cpp.i
 
 invalid_name_exception.s: invalid_name_exception.cpp.s
@@ -281,7 +291,7 @@ invalid_name_exception.s: invalid_name_exception.cpp.s
 
 # target to generate assembly for a file
 invalid_name_exception.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.s
 .PHONY : invalid_name_exception.cpp.s
 
 non_existing_element.o: non_existing_element.cpp.o
@@ -289,7 +299,7 @@ non_existing_element.o: non_existing_element.cpp.o
 
 # target to build an object file
 non_existing_element.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o
 .PHONY : non_existing_element.cpp.o
 
 non_existing_element.i: non_existing_element.cpp.i
@@ -297,7 +307,7 @@ non_existing_element.i: non_existing_element.cpp.i
 
 # target to preprocess a source file
 non_existing_element.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.i
 .PHONY : non_existing_element.cpp.i
 
 non_existing_element.s: non_existing_element.cpp.s
@@ -305,7 +315,7 @@ non_existing_element.s: non_existing_element.cpp.s
 
 # target to generate assembly for a file
 non_existing_element.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.s
 .PHONY : non_existing_element.cpp.s
 
 # Help Target
@@ -317,6 +327,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... exception"
+	@echo "... test"
 	@echo "... data_provider_exception.o"
 	@echo "... data_provider_exception.i"
 	@echo "... data_provider_exception.s"
@@ -352,6 +363,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

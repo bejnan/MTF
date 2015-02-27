@@ -5,11 +5,11 @@
  *      Author: banaszewski
  */
 
-#include <gtest.h>
+#include <gtest/gtest.h>
 
-#include "analysis_runner.h"
+//#include "analysis_runner.h"
 
-using ::testing;
+using namespace ::testing;
 
 namespace control {
 

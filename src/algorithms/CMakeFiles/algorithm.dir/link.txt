@@ -1,0 +1,2 @@
+/usr/bin/ar cq libalgorithm.a  CMakeFiles/algorithm.dir/algorithm_container.cpp.o CMakeFiles/algorithm.dir/matrix/mtf_matrix.cpp.o CMakeFiles/algorithm.dir/move_to_front/move_to_front.cpp.o CMakeFiles/algorithm.dir/tree/random_tree_root.cpp.o CMakeFiles/algorithm.dir/tree/tree_root.cpp.o
+/usr/bin/ranlib libalgorithm.a

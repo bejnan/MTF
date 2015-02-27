@@ -26,19 +26,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/banaszewski/git/MTF/src
+CMAKE_SOURCE_DIR = /home/j_banaszewski/git/MTF/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/banaszewski/git/MTF/build
+CMAKE_BINARY_DIR = /home/j_banaszewski/git/MTF/build
 
 # Include any dependencies generated for this target.
 include controller/CMakeFiles/configuration.dir/depend.make
@@ -50,18 +50,18 @@ include controller/CMakeFiles/configuration.dir/progress.make
 include controller/CMakeFiles/configuration.dir/flags.make
 
 controller/CMakeFiles/configuration.dir/analysis_runner.cpp.o: controller/CMakeFiles/configuration.dir/flags.make
-controller/CMakeFiles/configuration.dir/analysis_runner.cpp.o: /home/banaszewski/git/MTF/src/controller/analysis_runner.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_1)
+controller/CMakeFiles/configuration.dir/analysis_runner.cpp.o: /home/j_banaszewski/git/MTF/src/controller/analysis_runner.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object controller/CMakeFiles/configuration.dir/analysis_runner.cpp.o"
-	cd /home/banaszewski/git/MTF/build/controller && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/configuration.dir/analysis_runner.cpp.o -c /home/banaszewski/git/MTF/src/controller/analysis_runner.cpp
+	cd /home/j_banaszewski/git/MTF/build/controller && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/configuration.dir/analysis_runner.cpp.o -c /home/j_banaszewski/git/MTF/src/controller/analysis_runner.cpp
 
 controller/CMakeFiles/configuration.dir/analysis_runner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/configuration.dir/analysis_runner.cpp.i"
-	cd /home/banaszewski/git/MTF/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/controller/analysis_runner.cpp > CMakeFiles/configuration.dir/analysis_runner.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/controller/analysis_runner.cpp > CMakeFiles/configuration.dir/analysis_runner.cpp.i
 
 controller/CMakeFiles/configuration.dir/analysis_runner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/configuration.dir/analysis_runner.cpp.s"
-	cd /home/banaszewski/git/MTF/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/controller/analysis_runner.cpp -o CMakeFiles/configuration.dir/analysis_runner.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/controller/analysis_runner.cpp -o CMakeFiles/configuration.dir/analysis_runner.cpp.s
 
 controller/CMakeFiles/configuration.dir/analysis_runner.cpp.o.requires:
 .PHONY : controller/CMakeFiles/configuration.dir/analysis_runner.cpp.o.requires
@@ -73,18 +73,18 @@ controller/CMakeFiles/configuration.dir/analysis_runner.cpp.o.provides: controll
 controller/CMakeFiles/configuration.dir/analysis_runner.cpp.o.provides.build: controller/CMakeFiles/configuration.dir/analysis_runner.cpp.o
 
 controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.o: controller/CMakeFiles/configuration.dir/flags.make
-controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.o: /home/banaszewski/git/MTF/src/controller/configuration/configuration.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_2)
+controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.o: /home/j_banaszewski/git/MTF/src/controller/configuration/configuration.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.o"
-	cd /home/banaszewski/git/MTF/build/controller && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/configuration.dir/configuration/configuration.cpp.o -c /home/banaszewski/git/MTF/src/controller/configuration/configuration.cpp
+	cd /home/j_banaszewski/git/MTF/build/controller && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/configuration.dir/configuration/configuration.cpp.o -c /home/j_banaszewski/git/MTF/src/controller/configuration/configuration.cpp
 
 controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/configuration.dir/configuration/configuration.cpp.i"
-	cd /home/banaszewski/git/MTF/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/controller/configuration/configuration.cpp > CMakeFiles/configuration.dir/configuration/configuration.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/controller/configuration/configuration.cpp > CMakeFiles/configuration.dir/configuration/configuration.cpp.i
 
 controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/configuration.dir/configuration/configuration.cpp.s"
-	cd /home/banaszewski/git/MTF/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/controller/configuration/configuration.cpp -o CMakeFiles/configuration.dir/configuration/configuration.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/controller/configuration/configuration.cpp -o CMakeFiles/configuration.dir/configuration/configuration.cpp.s
 
 controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.o.requires:
 .PHONY : controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.o.requires
@@ -96,18 +96,18 @@ controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.o.provid
 controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.o.provides.build: controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.o
 
 controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.o: controller/CMakeFiles/configuration.dir/flags.make
-controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.o: /home/banaszewski/git/MTF/src/controller/configuration/objects_builder.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_3)
+controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.o: /home/j_banaszewski/git/MTF/src/controller/configuration/objects_builder.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.o"
-	cd /home/banaszewski/git/MTF/build/controller && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/configuration.dir/configuration/objects_builder.cpp.o -c /home/banaszewski/git/MTF/src/controller/configuration/objects_builder.cpp
+	cd /home/j_banaszewski/git/MTF/build/controller && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/configuration.dir/configuration/objects_builder.cpp.o -c /home/j_banaszewski/git/MTF/src/controller/configuration/objects_builder.cpp
 
 controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/configuration.dir/configuration/objects_builder.cpp.i"
-	cd /home/banaszewski/git/MTF/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/controller/configuration/objects_builder.cpp > CMakeFiles/configuration.dir/configuration/objects_builder.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/controller/configuration/objects_builder.cpp > CMakeFiles/configuration.dir/configuration/objects_builder.cpp.i
 
 controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/configuration.dir/configuration/objects_builder.cpp.s"
-	cd /home/banaszewski/git/MTF/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/controller/configuration/objects_builder.cpp -o CMakeFiles/configuration.dir/configuration/objects_builder.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/controller/configuration/objects_builder.cpp -o CMakeFiles/configuration.dir/configuration/objects_builder.cpp.s
 
 controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.o.requires:
 .PHONY : controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.o.requires
@@ -133,8 +133,8 @@ controller/libconfiguration.a: controller/CMakeFiles/configuration.dir/configura
 controller/libconfiguration.a: controller/CMakeFiles/configuration.dir/build.make
 controller/libconfiguration.a: controller/CMakeFiles/configuration.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libconfiguration.a"
-	cd /home/banaszewski/git/MTF/build/controller && $(CMAKE_COMMAND) -P CMakeFiles/configuration.dir/cmake_clean_target.cmake
-	cd /home/banaszewski/git/MTF/build/controller && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/configuration.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/j_banaszewski/git/MTF/build/controller && $(CMAKE_COMMAND) -P CMakeFiles/configuration.dir/cmake_clean_target.cmake
+	cd /home/j_banaszewski/git/MTF/build/controller && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/configuration.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 controller/CMakeFiles/configuration.dir/build: controller/libconfiguration.a
@@ -146,10 +146,10 @@ controller/CMakeFiles/configuration.dir/requires: controller/CMakeFiles/configur
 .PHONY : controller/CMakeFiles/configuration.dir/requires
 
 controller/CMakeFiles/configuration.dir/clean:
-	cd /home/banaszewski/git/MTF/build/controller && $(CMAKE_COMMAND) -P CMakeFiles/configuration.dir/cmake_clean.cmake
+	cd /home/j_banaszewski/git/MTF/build/controller && $(CMAKE_COMMAND) -P CMakeFiles/configuration.dir/cmake_clean.cmake
 .PHONY : controller/CMakeFiles/configuration.dir/clean
 
 controller/CMakeFiles/configuration.dir/depend:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/banaszewski/git/MTF/src /home/banaszewski/git/MTF/src/controller /home/banaszewski/git/MTF/build /home/banaszewski/git/MTF/build/controller /home/banaszewski/git/MTF/build/controller/CMakeFiles/configuration.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/j_banaszewski/git/MTF/src /home/j_banaszewski/git/MTF/src/controller /home/j_banaszewski/git/MTF/build /home/j_banaszewski/git/MTF/build/controller /home/j_banaszewski/git/MTF/build/controller/CMakeFiles/configuration.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : controller/CMakeFiles/configuration.dir/depend
 

@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/MTF_GTEST.dir/gtest/gtest_main.cpp.o  -o MTF_GTEST -rdynamic 

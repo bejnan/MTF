@@ -34,27 +34,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/banaszewski/git/MTF/src
+CMAKE_SOURCE_DIR = /home/j_banaszewski/git/MTF/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/banaszewski/git/MTF/build
+CMAKE_BINARY_DIR = /home/j_banaszewski/git/MTF/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -64,23 +64,33 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles /home/banaszewski/git/MTF/build/algorithms/CMakeFiles/progress.marks
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 algorithms/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles /home/j_banaszewski/git/MTF/build/algorithms/CMakeFiles/progress.marks
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 algorithms/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 algorithms/clean
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 algorithms/clean
 .PHONY : clean
 
 # The main clean target
@@ -89,22 +99,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 algorithms/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 algorithms/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 algorithms/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 algorithms/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 algorithms/CMakeFiles/algorithm.dir/rule:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/algorithm.dir/rule
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 algorithms/CMakeFiles/algorithm.dir/rule
 .PHONY : algorithms/CMakeFiles/algorithm.dir/rule
 
 # Convenience name for target.
@@ -113,7 +123,7 @@ algorithm: algorithms/CMakeFiles/algorithm.dir/rule
 
 # fast build rule for target.
 algorithm/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/build
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/build
 .PHONY : algorithm/fast
 
 algorithm_container.o: algorithm_container.cpp.o
@@ -121,7 +131,7 @@ algorithm_container.o: algorithm_container.cpp.o
 
 # target to build an object file
 algorithm_container.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/algorithm_container.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/algorithm_container.cpp.o
 .PHONY : algorithm_container.cpp.o
 
 algorithm_container.i: algorithm_container.cpp.i
@@ -129,7 +139,7 @@ algorithm_container.i: algorithm_container.cpp.i
 
 # target to preprocess a source file
 algorithm_container.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/algorithm_container.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/algorithm_container.cpp.i
 .PHONY : algorithm_container.cpp.i
 
 algorithm_container.s: algorithm_container.cpp.s
@@ -137,7 +147,7 @@ algorithm_container.s: algorithm_container.cpp.s
 
 # target to generate assembly for a file
 algorithm_container.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/algorithm_container.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/algorithm_container.cpp.s
 .PHONY : algorithm_container.cpp.s
 
 matrix/mtf_matrix.o: matrix/mtf_matrix.cpp.o
@@ -145,7 +155,7 @@ matrix/mtf_matrix.o: matrix/mtf_matrix.cpp.o
 
 # target to build an object file
 matrix/mtf_matrix.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/matrix/mtf_matrix.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/matrix/mtf_matrix.cpp.o
 .PHONY : matrix/mtf_matrix.cpp.o
 
 matrix/mtf_matrix.i: matrix/mtf_matrix.cpp.i
@@ -153,7 +163,7 @@ matrix/mtf_matrix.i: matrix/mtf_matrix.cpp.i
 
 # target to preprocess a source file
 matrix/mtf_matrix.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/matrix/mtf_matrix.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/matrix/mtf_matrix.cpp.i
 .PHONY : matrix/mtf_matrix.cpp.i
 
 matrix/mtf_matrix.s: matrix/mtf_matrix.cpp.s
@@ -161,7 +171,7 @@ matrix/mtf_matrix.s: matrix/mtf_matrix.cpp.s
 
 # target to generate assembly for a file
 matrix/mtf_matrix.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/matrix/mtf_matrix.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/matrix/mtf_matrix.cpp.s
 .PHONY : matrix/mtf_matrix.cpp.s
 
 move_to_front/move_to_front.o: move_to_front/move_to_front.cpp.o
@@ -169,7 +179,7 @@ move_to_front/move_to_front.o: move_to_front/move_to_front.cpp.o
 
 # target to build an object file
 move_to_front/move_to_front.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/move_to_front/move_to_front.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/move_to_front/move_to_front.cpp.o
 .PHONY : move_to_front/move_to_front.cpp.o
 
 move_to_front/move_to_front.i: move_to_front/move_to_front.cpp.i
@@ -177,7 +187,7 @@ move_to_front/move_to_front.i: move_to_front/move_to_front.cpp.i
 
 # target to preprocess a source file
 move_to_front/move_to_front.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/move_to_front/move_to_front.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/move_to_front/move_to_front.cpp.i
 .PHONY : move_to_front/move_to_front.cpp.i
 
 move_to_front/move_to_front.s: move_to_front/move_to_front.cpp.s
@@ -185,7 +195,7 @@ move_to_front/move_to_front.s: move_to_front/move_to_front.cpp.s
 
 # target to generate assembly for a file
 move_to_front/move_to_front.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/move_to_front/move_to_front.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/move_to_front/move_to_front.cpp.s
 .PHONY : move_to_front/move_to_front.cpp.s
 
 tree/random_tree_root.o: tree/random_tree_root.cpp.o
@@ -193,7 +203,7 @@ tree/random_tree_root.o: tree/random_tree_root.cpp.o
 
 # target to build an object file
 tree/random_tree_root.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/tree/random_tree_root.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/tree/random_tree_root.cpp.o
 .PHONY : tree/random_tree_root.cpp.o
 
 tree/random_tree_root.i: tree/random_tree_root.cpp.i
@@ -201,7 +211,7 @@ tree/random_tree_root.i: tree/random_tree_root.cpp.i
 
 # target to preprocess a source file
 tree/random_tree_root.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/tree/random_tree_root.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/tree/random_tree_root.cpp.i
 .PHONY : tree/random_tree_root.cpp.i
 
 tree/random_tree_root.s: tree/random_tree_root.cpp.s
@@ -209,7 +219,7 @@ tree/random_tree_root.s: tree/random_tree_root.cpp.s
 
 # target to generate assembly for a file
 tree/random_tree_root.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/tree/random_tree_root.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/tree/random_tree_root.cpp.s
 .PHONY : tree/random_tree_root.cpp.s
 
 tree/tree_root.o: tree/tree_root.cpp.o
@@ -217,7 +227,7 @@ tree/tree_root.o: tree/tree_root.cpp.o
 
 # target to build an object file
 tree/tree_root.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/tree/tree_root.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/tree/tree_root.cpp.o
 .PHONY : tree/tree_root.cpp.o
 
 tree/tree_root.i: tree/tree_root.cpp.i
@@ -225,7 +235,7 @@ tree/tree_root.i: tree/tree_root.cpp.i
 
 # target to preprocess a source file
 tree/tree_root.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/tree/tree_root.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/tree/tree_root.cpp.i
 .PHONY : tree/tree_root.cpp.i
 
 tree/tree_root.s: tree/tree_root.cpp.s
@@ -233,7 +243,7 @@ tree/tree_root.s: tree/tree_root.cpp.s
 
 # target to generate assembly for a file
 tree/tree_root.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/tree/tree_root.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f algorithms/CMakeFiles/algorithm.dir/build.make algorithms/CMakeFiles/algorithm.dir/tree/tree_root.cpp.s
 .PHONY : tree/tree_root.cpp.s
 
 # Help Target
@@ -245,6 +255,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... algorithm"
+	@echo "... test"
 	@echo "... algorithm_container.o"
 	@echo "... algorithm_container.i"
 	@echo "... algorithm_container.s"
@@ -271,6 +282,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -34,27 +34,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/banaszewski/git/MTF/src
+CMAKE_SOURCE_DIR = /home/j_banaszewski/git/MTF/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/banaszewski/git/MTF/build
+CMAKE_BINARY_DIR = /home/j_banaszewski/git/MTF/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -64,23 +64,33 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles /home/banaszewski/git/MTF/build/elements/CMakeFiles/progress.marks
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 elements/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles /home/j_banaszewski/git/MTF/build/elements/CMakeFiles/progress.marks
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 elements/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 elements/clean
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 elements/clean
 .PHONY : clean
 
 # The main clean target
@@ -89,22 +99,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 elements/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 elements/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 elements/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 elements/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 elements/CMakeFiles/element.dir/rule:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 elements/CMakeFiles/element.dir/rule
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 elements/CMakeFiles/element.dir/rule
 .PHONY : elements/CMakeFiles/element.dir/rule
 
 # Convenience name for target.
@@ -113,7 +123,7 @@ element: elements/CMakeFiles/element.dir/rule
 
 # fast build rule for target.
 element/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/build
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/build
 .PHONY : element/fast
 
 complex_difference_element.o: complex_difference_element.cpp.o
@@ -121,7 +131,7 @@ complex_difference_element.o: complex_difference_element.cpp.o
 
 # target to build an object file
 complex_difference_element.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/complex_difference_element.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/complex_difference_element.cpp.o
 .PHONY : complex_difference_element.cpp.o
 
 complex_difference_element.i: complex_difference_element.cpp.i
@@ -129,7 +139,7 @@ complex_difference_element.i: complex_difference_element.cpp.i
 
 # target to preprocess a source file
 complex_difference_element.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/complex_difference_element.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/complex_difference_element.cpp.i
 .PHONY : complex_difference_element.cpp.i
 
 complex_difference_element.s: complex_difference_element.cpp.s
@@ -137,7 +147,7 @@ complex_difference_element.s: complex_difference_element.cpp.s
 
 # target to generate assembly for a file
 complex_difference_element.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/complex_difference_element.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/complex_difference_element.cpp.s
 .PHONY : complex_difference_element.cpp.s
 
 element.o: element.cpp.o
@@ -145,7 +155,7 @@ element.o: element.cpp.o
 
 # target to build an object file
 element.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/element.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/element.cpp.o
 .PHONY : element.cpp.o
 
 element.i: element.cpp.i
@@ -153,7 +163,7 @@ element.i: element.cpp.i
 
 # target to preprocess a source file
 element.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/element.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/element.cpp.i
 .PHONY : element.cpp.i
 
 element.s: element.cpp.s
@@ -161,7 +171,7 @@ element.s: element.cpp.s
 
 # target to generate assembly for a file
 element.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/element.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/element.cpp.s
 .PHONY : element.cpp.s
 
 simple_element.o: simple_element.cpp.o
@@ -169,7 +179,7 @@ simple_element.o: simple_element.cpp.o
 
 # target to build an object file
 simple_element.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/simple_element.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/simple_element.cpp.o
 .PHONY : simple_element.cpp.o
 
 simple_element.i: simple_element.cpp.i
@@ -177,7 +187,7 @@ simple_element.i: simple_element.cpp.i
 
 # target to preprocess a source file
 simple_element.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/simple_element.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/simple_element.cpp.i
 .PHONY : simple_element.cpp.i
 
 simple_element.s: simple_element.cpp.s
@@ -185,7 +195,7 @@ simple_element.s: simple_element.cpp.s
 
 # target to generate assembly for a file
 simple_element.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/simple_element.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f elements/CMakeFiles/element.dir/build.make elements/CMakeFiles/element.dir/simple_element.cpp.s
 .PHONY : simple_element.cpp.s
 
 # Help Target
@@ -197,6 +207,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... element"
+	@echo "... test"
 	@echo "... complex_difference_element.o"
 	@echo "... complex_difference_element.i"
 	@echo "... complex_difference_element.s"
@@ -217,6 +228,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

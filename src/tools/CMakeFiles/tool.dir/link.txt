@@ -1,0 +1,2 @@
+/usr/bin/ar cq libtool.a  CMakeFiles/tool.dir/processor_factory.cpp.o CMakeFiles/tool.dir/processor.cpp.o CMakeFiles/tool.dir/judges/deviation_judge.cpp.o CMakeFiles/tool.dir/judges/tester.cpp.o
+/usr/bin/ranlib libtool.a

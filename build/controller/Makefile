@@ -34,27 +34,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/banaszewski/git/MTF/src
+CMAKE_SOURCE_DIR = /home/j_banaszewski/git/MTF/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/banaszewski/git/MTF/build
+CMAKE_BINARY_DIR = /home/j_banaszewski/git/MTF/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -64,23 +64,33 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles /home/banaszewski/git/MTF/build/controller/CMakeFiles/progress.marks
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 controller/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles /home/j_banaszewski/git/MTF/build/controller/CMakeFiles/progress.marks
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 controller/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 controller/clean
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 controller/clean
 .PHONY : clean
 
 # The main clean target
@@ -89,22 +99,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 controller/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 controller/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 controller/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 controller/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 controller/CMakeFiles/configuration.dir/rule:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 controller/CMakeFiles/configuration.dir/rule
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 controller/CMakeFiles/configuration.dir/rule
 .PHONY : controller/CMakeFiles/configuration.dir/rule
 
 # Convenience name for target.
@@ -113,7 +123,7 @@ configuration: controller/CMakeFiles/configuration.dir/rule
 
 # fast build rule for target.
 configuration/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/build
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/build
 .PHONY : configuration/fast
 
 analysis_runner.o: analysis_runner.cpp.o
@@ -121,7 +131,7 @@ analysis_runner.o: analysis_runner.cpp.o
 
 # target to build an object file
 analysis_runner.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/analysis_runner.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/analysis_runner.cpp.o
 .PHONY : analysis_runner.cpp.o
 
 analysis_runner.i: analysis_runner.cpp.i
@@ -129,7 +139,7 @@ analysis_runner.i: analysis_runner.cpp.i
 
 # target to preprocess a source file
 analysis_runner.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/analysis_runner.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/analysis_runner.cpp.i
 .PHONY : analysis_runner.cpp.i
 
 analysis_runner.s: analysis_runner.cpp.s
@@ -137,7 +147,7 @@ analysis_runner.s: analysis_runner.cpp.s
 
 # target to generate assembly for a file
 analysis_runner.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/analysis_runner.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/analysis_runner.cpp.s
 .PHONY : analysis_runner.cpp.s
 
 configuration/configuration.o: configuration/configuration.cpp.o
@@ -145,7 +155,7 @@ configuration/configuration.o: configuration/configuration.cpp.o
 
 # target to build an object file
 configuration/configuration.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.o
 .PHONY : configuration/configuration.cpp.o
 
 configuration/configuration.i: configuration/configuration.cpp.i
@@ -153,7 +163,7 @@ configuration/configuration.i: configuration/configuration.cpp.i
 
 # target to preprocess a source file
 configuration/configuration.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.i
 .PHONY : configuration/configuration.cpp.i
 
 configuration/configuration.s: configuration/configuration.cpp.s
@@ -161,7 +171,7 @@ configuration/configuration.s: configuration/configuration.cpp.s
 
 # target to generate assembly for a file
 configuration/configuration.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/configuration/configuration.cpp.s
 .PHONY : configuration/configuration.cpp.s
 
 configuration/objects_builder.o: configuration/objects_builder.cpp.o
@@ -169,7 +179,7 @@ configuration/objects_builder.o: configuration/objects_builder.cpp.o
 
 # target to build an object file
 configuration/objects_builder.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.o
 .PHONY : configuration/objects_builder.cpp.o
 
 configuration/objects_builder.i: configuration/objects_builder.cpp.i
@@ -177,7 +187,7 @@ configuration/objects_builder.i: configuration/objects_builder.cpp.i
 
 # target to preprocess a source file
 configuration/objects_builder.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.i
 .PHONY : configuration/objects_builder.cpp.i
 
 configuration/objects_builder.s: configuration/objects_builder.cpp.s
@@ -185,7 +195,7 @@ configuration/objects_builder.s: configuration/objects_builder.cpp.s
 
 # target to generate assembly for a file
 configuration/objects_builder.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f controller/CMakeFiles/configuration.dir/build.make controller/CMakeFiles/configuration.dir/configuration/objects_builder.cpp.s
 .PHONY : configuration/objects_builder.cpp.s
 
 # Help Target
@@ -197,6 +207,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... configuration"
+	@echo "... test"
 	@echo "... analysis_runner.o"
 	@echo "... analysis_runner.i"
 	@echo "... analysis_runner.s"
@@ -217,6 +228,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

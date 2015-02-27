@@ -1,0 +1,2 @@
+/usr/bin/ar cq libconfiguration.a  CMakeFiles/configuration.dir/analysis_runner.cpp.o CMakeFiles/configuration.dir/configuration/configuration.cpp.o CMakeFiles/configuration.dir/configuration/objects_builder.cpp.o
+/usr/bin/ranlib libconfiguration.a

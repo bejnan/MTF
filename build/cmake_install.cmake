@@ -1,4 +1,4 @@
-# Install script for directory: /home/banaszewski/git/MTF/src
+# Install script for directory: /home/j_banaszewski/git/MTF/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,15 +34,18 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/banaszewski/git/MTF/build/algorithms/cmake_install.cmake")
-  include("/home/banaszewski/git/MTF/build/controller/cmake_install.cmake")
-  include("/home/banaszewski/git/MTF/build/data_managment/cmake_install.cmake")
-  include("/home/banaszewski/git/MTF/build/events/cmake_install.cmake")
-  include("/home/banaszewski/git/MTF/build/exceptions/cmake_install.cmake")
-  include("/home/banaszewski/git/MTF/build/elements/cmake_install.cmake")
-  include("/home/banaszewski/git/MTF/build/results/cmake_install.cmake")
-  include("/home/banaszewski/git/MTF/build/tools/cmake_install.cmake")
-  include("/home/banaszewski/git/MTF/build/utils/cmake_install.cmake")
+  include("/home/j_banaszewski/git/MTF/build/gmock/cmake_install.cmake")
+  include("/home/j_banaszewski/git/MTF/build/algorithms/cmake_install.cmake")
+  include("/home/j_banaszewski/git/MTF/build/controller/cmake_install.cmake")
+  include("/home/j_banaszewski/git/MTF/build/data_managment/cmake_install.cmake")
+  include("/home/j_banaszewski/git/MTF/build/events/cmake_install.cmake")
+  include("/home/j_banaszewski/git/MTF/build/exceptions/cmake_install.cmake")
+  include("/home/j_banaszewski/git/MTF/build/elements/cmake_install.cmake")
+  include("/home/j_banaszewski/git/MTF/build/results/cmake_install.cmake")
+  include("/home/j_banaszewski/git/MTF/build/tools/cmake_install.cmake")
+  include("/home/j_banaszewski/git/MTF/build/utils/cmake_install.cmake")
+  include("/home/j_banaszewski/git/MTF/build/gtest/cmake_install.cmake")
+  include("/home/j_banaszewski/git/MTF/build/test/cmake_install.cmake")
 
 endif()
 
@@ -52,7 +55,7 @@ else()
   set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 endif()
 
-file(WRITE "/home/banaszewski/git/MTF/build/${CMAKE_INSTALL_MANIFEST}" "")
+file(WRITE "/home/j_banaszewski/git/MTF/build/${CMAKE_INSTALL_MANIFEST}" "")
 foreach(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  file(APPEND "/home/banaszewski/git/MTF/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  file(APPEND "/home/j_banaszewski/git/MTF/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 endforeach()

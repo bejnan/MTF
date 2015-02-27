@@ -34,27 +34,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/banaszewski/git/MTF/src
+CMAKE_SOURCE_DIR = /home/j_banaszewski/git/MTF/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/banaszewski/git/MTF/build
+CMAKE_BINARY_DIR = /home/j_banaszewski/git/MTF/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -64,23 +64,33 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles /home/banaszewski/git/MTF/build/data_managment/CMakeFiles/progress.marks
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 data_managment/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles /home/j_banaszewski/git/MTF/build/data_managment/CMakeFiles/progress.marks
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 data_managment/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 data_managment/clean
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 data_managment/clean
 .PHONY : clean
 
 # The main clean target
@@ -89,22 +99,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 data_managment/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 data_managment/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 data_managment/preinstall
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 data_managment/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 data_managment/CMakeFiles/data_managment.dir/rule:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 data_managment/CMakeFiles/data_managment.dir/rule
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f CMakeFiles/Makefile2 data_managment/CMakeFiles/data_managment.dir/rule
 .PHONY : data_managment/CMakeFiles/data_managment.dir/rule
 
 # Convenience name for target.
@@ -113,7 +123,7 @@ data_managment: data_managment/CMakeFiles/data_managment.dir/rule
 
 # fast build rule for target.
 data_managment/fast:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/build
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/build
 .PHONY : data_managment/fast
 
 data_output/csv_data_output.o: data_output/csv_data_output.cpp.o
@@ -121,7 +131,7 @@ data_output/csv_data_output.o: data_output/csv_data_output.cpp.o
 
 # target to build an object file
 data_output/csv_data_output.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.o
 .PHONY : data_output/csv_data_output.cpp.o
 
 data_output/csv_data_output.i: data_output/csv_data_output.cpp.i
@@ -129,7 +139,7 @@ data_output/csv_data_output.i: data_output/csv_data_output.cpp.i
 
 # target to preprocess a source file
 data_output/csv_data_output.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.i
 .PHONY : data_output/csv_data_output.cpp.i
 
 data_output/csv_data_output.s: data_output/csv_data_output.cpp.s
@@ -137,7 +147,7 @@ data_output/csv_data_output.s: data_output/csv_data_output.cpp.s
 
 # target to generate assembly for a file
 data_output/csv_data_output.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/csv_data_output.cpp.s
 .PHONY : data_output/csv_data_output.cpp.s
 
 data_output/csv_file_data_output.o: data_output/csv_file_data_output.cpp.o
@@ -145,7 +155,7 @@ data_output/csv_file_data_output.o: data_output/csv_file_data_output.cpp.o
 
 # target to build an object file
 data_output/csv_file_data_output.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.o
 .PHONY : data_output/csv_file_data_output.cpp.o
 
 data_output/csv_file_data_output.i: data_output/csv_file_data_output.cpp.i
@@ -153,7 +163,7 @@ data_output/csv_file_data_output.i: data_output/csv_file_data_output.cpp.i
 
 # target to preprocess a source file
 data_output/csv_file_data_output.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.i
 .PHONY : data_output/csv_file_data_output.cpp.i
 
 data_output/csv_file_data_output.s: data_output/csv_file_data_output.cpp.s
@@ -161,7 +171,7 @@ data_output/csv_file_data_output.s: data_output/csv_file_data_output.cpp.s
 
 # target to generate assembly for a file
 data_output/csv_file_data_output.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/csv_file_data_output.cpp.s
 .PHONY : data_output/csv_file_data_output.cpp.s
 
 data_output/file_data_output.o: data_output/file_data_output.cpp.o
@@ -169,7 +179,7 @@ data_output/file_data_output.o: data_output/file_data_output.cpp.o
 
 # target to build an object file
 data_output/file_data_output.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.o
 .PHONY : data_output/file_data_output.cpp.o
 
 data_output/file_data_output.i: data_output/file_data_output.cpp.i
@@ -177,7 +187,7 @@ data_output/file_data_output.i: data_output/file_data_output.cpp.i
 
 # target to preprocess a source file
 data_output/file_data_output.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.i
 .PHONY : data_output/file_data_output.cpp.i
 
 data_output/file_data_output.s: data_output/file_data_output.cpp.s
@@ -185,7 +195,7 @@ data_output/file_data_output.s: data_output/file_data_output.cpp.s
 
 # target to generate assembly for a file
 data_output/file_data_output.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_output/file_data_output.cpp.s
 .PHONY : data_output/file_data_output.cpp.s
 
 data_provider/file_data_provider.o: data_provider/file_data_provider.cpp.o
@@ -193,7 +203,7 @@ data_provider/file_data_provider.o: data_provider/file_data_provider.cpp.o
 
 # target to build an object file
 data_provider/file_data_provider.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.o
 .PHONY : data_provider/file_data_provider.cpp.o
 
 data_provider/file_data_provider.i: data_provider/file_data_provider.cpp.i
@@ -201,7 +211,7 @@ data_provider/file_data_provider.i: data_provider/file_data_provider.cpp.i
 
 # target to preprocess a source file
 data_provider/file_data_provider.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.i
 .PHONY : data_provider/file_data_provider.cpp.i
 
 data_provider/file_data_provider.s: data_provider/file_data_provider.cpp.s
@@ -209,7 +219,7 @@ data_provider/file_data_provider.s: data_provider/file_data_provider.cpp.s
 
 # target to generate assembly for a file
 data_provider/file_data_provider.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/data_provider/file_data_provider.cpp.s
 .PHONY : data_provider/file_data_provider.cpp.s
 
 database.o: database.cpp.o
@@ -217,7 +227,7 @@ database.o: database.cpp.o
 
 # target to build an object file
 database.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/database.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/database.cpp.o
 .PHONY : database.cpp.o
 
 database.i: database.cpp.i
@@ -225,7 +235,7 @@ database.i: database.cpp.i
 
 # target to preprocess a source file
 database.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/database.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/database.cpp.i
 .PHONY : database.cpp.i
 
 database.s: database.cpp.s
@@ -233,7 +243,7 @@ database.s: database.cpp.s
 
 # target to generate assembly for a file
 database.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/database.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/database.cpp.s
 .PHONY : database.cpp.s
 
 results_collectors/data_collector.o: results_collectors/data_collector.cpp.o
@@ -241,7 +251,7 @@ results_collectors/data_collector.o: results_collectors/data_collector.cpp.o
 
 # target to build an object file
 results_collectors/data_collector.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.o
 .PHONY : results_collectors/data_collector.cpp.o
 
 results_collectors/data_collector.i: results_collectors/data_collector.cpp.i
@@ -249,7 +259,7 @@ results_collectors/data_collector.i: results_collectors/data_collector.cpp.i
 
 # target to preprocess a source file
 results_collectors/data_collector.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.i
 .PHONY : results_collectors/data_collector.cpp.i
 
 results_collectors/data_collector.s: results_collectors/data_collector.cpp.s
@@ -257,7 +267,7 @@ results_collectors/data_collector.s: results_collectors/data_collector.cpp.s
 
 # target to generate assembly for a file
 results_collectors/data_collector.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/data_collector.cpp.s
 .PHONY : results_collectors/data_collector.cpp.s
 
 results_collectors/judge_collector.o: results_collectors/judge_collector.cpp.o
@@ -265,7 +275,7 @@ results_collectors/judge_collector.o: results_collectors/judge_collector.cpp.o
 
 # target to build an object file
 results_collectors/judge_collector.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.o
 .PHONY : results_collectors/judge_collector.cpp.o
 
 results_collectors/judge_collector.i: results_collectors/judge_collector.cpp.i
@@ -273,7 +283,7 @@ results_collectors/judge_collector.i: results_collectors/judge_collector.cpp.i
 
 # target to preprocess a source file
 results_collectors/judge_collector.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.i
 .PHONY : results_collectors/judge_collector.cpp.i
 
 results_collectors/judge_collector.s: results_collectors/judge_collector.cpp.s
@@ -281,7 +291,7 @@ results_collectors/judge_collector.s: results_collectors/judge_collector.cpp.s
 
 # target to generate assembly for a file
 results_collectors/judge_collector.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/judge_collector.cpp.s
 .PHONY : results_collectors/judge_collector.cpp.s
 
 results_collectors/result_collector.o: results_collectors/result_collector.cpp.o
@@ -289,7 +299,7 @@ results_collectors/result_collector.o: results_collectors/result_collector.cpp.o
 
 # target to build an object file
 results_collectors/result_collector.cpp.o:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.o
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.o
 .PHONY : results_collectors/result_collector.cpp.o
 
 results_collectors/result_collector.i: results_collectors/result_collector.cpp.i
@@ -297,7 +307,7 @@ results_collectors/result_collector.i: results_collectors/result_collector.cpp.i
 
 # target to preprocess a source file
 results_collectors/result_collector.cpp.i:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.i
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.i
 .PHONY : results_collectors/result_collector.cpp.i
 
 results_collectors/result_collector.s: results_collectors/result_collector.cpp.s
@@ -305,7 +315,7 @@ results_collectors/result_collector.s: results_collectors/result_collector.cpp.s
 
 # target to generate assembly for a file
 results_collectors/result_collector.cpp.s:
-	cd /home/banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.s
+	cd /home/j_banaszewski/git/MTF/build && $(MAKE) -f data_managment/CMakeFiles/data_managment.dir/build.make data_managment/CMakeFiles/data_managment.dir/results_collectors/result_collector.cpp.s
 .PHONY : results_collectors/result_collector.cpp.s
 
 # Help Target
@@ -317,6 +327,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... data_managment"
+	@echo "... test"
 	@echo "... data_output/csv_data_output.o"
 	@echo "... data_output/csv_data_output.i"
 	@echo "... data_output/csv_data_output.s"
@@ -352,6 +363,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

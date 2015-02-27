@@ -1,4 +1,4 @@
-# Install script for directory: /home/banaszewski/git/MTF/src/utils
+# Install script for directory: /home/j_banaszewski/git/MTF/src/utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

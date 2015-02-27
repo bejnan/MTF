@@ -34,27 +34,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/banaszewski/git/MTF/src
+CMAKE_SOURCE_DIR = /home/j_banaszewski/git/MTF/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/banaszewski/git/MTF/build
+CMAKE_BINARY_DIR = /home/j_banaszewski/git/MTF/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -64,18 +64,28 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles /home/banaszewski/git/MTF/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles /home/j_banaszewski/git/MTF/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/banaszewski/git/MTF/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/j_banaszewski/git/MTF/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -114,6 +124,84 @@ MTF: cmake_check_build_system
 MTF/fast:
 	$(MAKE) -f CMakeFiles/MTF.dir/build.make CMakeFiles/MTF.dir/build
 .PHONY : MTF/fast
+
+#=============================================================================
+# Target rules for targets named MTF_GTEST
+
+# Build rule for target.
+MTF_GTEST: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MTF_GTEST
+.PHONY : MTF_GTEST
+
+# fast build rule for target.
+MTF_GTEST/fast:
+	$(MAKE) -f CMakeFiles/MTF_GTEST.dir/build.make CMakeFiles/MTF_GTEST.dir/build
+.PHONY : MTF_GTEST/fast
+
+#=============================================================================
+# Target rules for targets named MTF_TEST
+
+# Build rule for target.
+MTF_TEST: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MTF_TEST
+.PHONY : MTF_TEST
+
+# fast build rule for target.
+MTF_TEST/fast:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/build
+.PHONY : MTF_TEST/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f gmock/CMakeFiles/gmock.dir/build.make gmock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f gmock/CMakeFiles/gmock_main.dir/build.make gmock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f gmock/gtest/CMakeFiles/gtest.dir/build.make gmock/gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f gmock/gtest/CMakeFiles/gtest_main.dir/build.make gmock/gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
 
 #=============================================================================
 # Target rules for targets named algorithm
@@ -232,6 +320,30 @@ util/fast:
 	$(MAKE) -f utils/CMakeFiles/util.dir/build.make utils/CMakeFiles/util.dir/build
 .PHONY : util/fast
 
+gtest/gtest_main.o: gtest/gtest_main.cpp.o
+.PHONY : gtest/gtest_main.o
+
+# target to build an object file
+gtest/gtest_main.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_GTEST.dir/build.make CMakeFiles/MTF_GTEST.dir/gtest/gtest_main.cpp.o
+.PHONY : gtest/gtest_main.cpp.o
+
+gtest/gtest_main.i: gtest/gtest_main.cpp.i
+.PHONY : gtest/gtest_main.i
+
+# target to preprocess a source file
+gtest/gtest_main.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_GTEST.dir/build.make CMakeFiles/MTF_GTEST.dir/gtest/gtest_main.cpp.i
+.PHONY : gtest/gtest_main.cpp.i
+
+gtest/gtest_main.s: gtest/gtest_main.cpp.s
+.PHONY : gtest/gtest_main.s
+
+# target to generate assembly for a file
+gtest/gtest_main.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_GTEST.dir/build.make CMakeFiles/MTF_GTEST.dir/gtest/gtest_main.cpp.s
+.PHONY : gtest/gtest_main.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -256,6 +368,318 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/MTF.dir/build.make CMakeFiles/MTF.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+main_test.o: main_test.cpp.o
+.PHONY : main_test.o
+
+# target to build an object file
+main_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/main_test.cpp.o
+.PHONY : main_test.cpp.o
+
+main_test.i: main_test.cpp.i
+.PHONY : main_test.i
+
+# target to preprocess a source file
+main_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/main_test.cpp.i
+.PHONY : main_test.cpp.i
+
+main_test.s: main_test.cpp.s
+.PHONY : main_test.s
+
+# target to generate assembly for a file
+main_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/main_test.cpp.s
+.PHONY : main_test.cpp.s
+
+test/data_collector_test.o: test/data_collector_test.cpp.o
+.PHONY : test/data_collector_test.o
+
+# target to build an object file
+test/data_collector_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/data_collector_test.cpp.o
+.PHONY : test/data_collector_test.cpp.o
+
+test/data_collector_test.i: test/data_collector_test.cpp.i
+.PHONY : test/data_collector_test.i
+
+# target to preprocess a source file
+test/data_collector_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/data_collector_test.cpp.i
+.PHONY : test/data_collector_test.cpp.i
+
+test/data_collector_test.s: test/data_collector_test.cpp.s
+.PHONY : test/data_collector_test.s
+
+# target to generate assembly for a file
+test/data_collector_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/data_collector_test.cpp.s
+.PHONY : test/data_collector_test.cpp.s
+
+test/database_test.o: test/database_test.cpp.o
+.PHONY : test/database_test.o
+
+# target to build an object file
+test/database_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/database_test.cpp.o
+.PHONY : test/database_test.cpp.o
+
+test/database_test.i: test/database_test.cpp.i
+.PHONY : test/database_test.i
+
+# target to preprocess a source file
+test/database_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/database_test.cpp.i
+.PHONY : test/database_test.cpp.i
+
+test/database_test.s: test/database_test.cpp.s
+.PHONY : test/database_test.s
+
+# target to generate assembly for a file
+test/database_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/database_test.cpp.s
+.PHONY : test/database_test.cpp.s
+
+test/element_test.o: test/element_test.cpp.o
+.PHONY : test/element_test.o
+
+# target to build an object file
+test/element_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/element_test.cpp.o
+.PHONY : test/element_test.cpp.o
+
+test/element_test.i: test/element_test.cpp.i
+.PHONY : test/element_test.i
+
+# target to preprocess a source file
+test/element_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/element_test.cpp.i
+.PHONY : test/element_test.cpp.i
+
+test/element_test.s: test/element_test.cpp.s
+.PHONY : test/element_test.s
+
+# target to generate assembly for a file
+test/element_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/element_test.cpp.s
+.PHONY : test/element_test.cpp.s
+
+test/event_notifier_test.o: test/event_notifier_test.cpp.o
+.PHONY : test/event_notifier_test.o
+
+# target to build an object file
+test/event_notifier_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/event_notifier_test.cpp.o
+.PHONY : test/event_notifier_test.cpp.o
+
+test/event_notifier_test.i: test/event_notifier_test.cpp.i
+.PHONY : test/event_notifier_test.i
+
+# target to preprocess a source file
+test/event_notifier_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/event_notifier_test.cpp.i
+.PHONY : test/event_notifier_test.cpp.i
+
+test/event_notifier_test.s: test/event_notifier_test.cpp.s
+.PHONY : test/event_notifier_test.s
+
+# target to generate assembly for a file
+test/event_notifier_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/event_notifier_test.cpp.s
+.PHONY : test/event_notifier_test.cpp.s
+
+test/file_data_provider_test.o: test/file_data_provider_test.cpp.o
+.PHONY : test/file_data_provider_test.o
+
+# target to build an object file
+test/file_data_provider_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/file_data_provider_test.cpp.o
+.PHONY : test/file_data_provider_test.cpp.o
+
+test/file_data_provider_test.i: test/file_data_provider_test.cpp.i
+.PHONY : test/file_data_provider_test.i
+
+# target to preprocess a source file
+test/file_data_provider_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/file_data_provider_test.cpp.i
+.PHONY : test/file_data_provider_test.cpp.i
+
+test/file_data_provider_test.s: test/file_data_provider_test.cpp.s
+.PHONY : test/file_data_provider_test.s
+
+# target to generate assembly for a file
+test/file_data_provider_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/file_data_provider_test.cpp.s
+.PHONY : test/file_data_provider_test.cpp.s
+
+test/judge_collector_test.o: test/judge_collector_test.cpp.o
+.PHONY : test/judge_collector_test.o
+
+# target to build an object file
+test/judge_collector_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/judge_collector_test.cpp.o
+.PHONY : test/judge_collector_test.cpp.o
+
+test/judge_collector_test.i: test/judge_collector_test.cpp.i
+.PHONY : test/judge_collector_test.i
+
+# target to preprocess a source file
+test/judge_collector_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/judge_collector_test.cpp.i
+.PHONY : test/judge_collector_test.cpp.i
+
+test/judge_collector_test.s: test/judge_collector_test.cpp.s
+.PHONY : test/judge_collector_test.s
+
+# target to generate assembly for a file
+test/judge_collector_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/judge_collector_test.cpp.s
+.PHONY : test/judge_collector_test.cpp.s
+
+test/move_to_front_test.o: test/move_to_front_test.cpp.o
+.PHONY : test/move_to_front_test.o
+
+# target to build an object file
+test/move_to_front_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/move_to_front_test.cpp.o
+.PHONY : test/move_to_front_test.cpp.o
+
+test/move_to_front_test.i: test/move_to_front_test.cpp.i
+.PHONY : test/move_to_front_test.i
+
+# target to preprocess a source file
+test/move_to_front_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/move_to_front_test.cpp.i
+.PHONY : test/move_to_front_test.cpp.i
+
+test/move_to_front_test.s: test/move_to_front_test.cpp.s
+.PHONY : test/move_to_front_test.s
+
+# target to generate assembly for a file
+test/move_to_front_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/move_to_front_test.cpp.s
+.PHONY : test/move_to_front_test.cpp.s
+
+test/mtf_matrix_test.o: test/mtf_matrix_test.cpp.o
+.PHONY : test/mtf_matrix_test.o
+
+# target to build an object file
+test/mtf_matrix_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/mtf_matrix_test.cpp.o
+.PHONY : test/mtf_matrix_test.cpp.o
+
+test/mtf_matrix_test.i: test/mtf_matrix_test.cpp.i
+.PHONY : test/mtf_matrix_test.i
+
+# target to preprocess a source file
+test/mtf_matrix_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/mtf_matrix_test.cpp.i
+.PHONY : test/mtf_matrix_test.cpp.i
+
+test/mtf_matrix_test.s: test/mtf_matrix_test.cpp.s
+.PHONY : test/mtf_matrix_test.s
+
+# target to generate assembly for a file
+test/mtf_matrix_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/mtf_matrix_test.cpp.s
+.PHONY : test/mtf_matrix_test.cpp.s
+
+test/proccessor_test.o: test/proccessor_test.cpp.o
+.PHONY : test/proccessor_test.o
+
+# target to build an object file
+test/proccessor_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/proccessor_test.cpp.o
+.PHONY : test/proccessor_test.cpp.o
+
+test/proccessor_test.i: test/proccessor_test.cpp.i
+.PHONY : test/proccessor_test.i
+
+# target to preprocess a source file
+test/proccessor_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/proccessor_test.cpp.i
+.PHONY : test/proccessor_test.cpp.i
+
+test/proccessor_test.s: test/proccessor_test.cpp.s
+.PHONY : test/proccessor_test.s
+
+# target to generate assembly for a file
+test/proccessor_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/proccessor_test.cpp.s
+.PHONY : test/proccessor_test.cpp.s
+
+test/tester_test.o: test/tester_test.cpp.o
+.PHONY : test/tester_test.o
+
+# target to build an object file
+test/tester_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/tester_test.cpp.o
+.PHONY : test/tester_test.cpp.o
+
+test/tester_test.i: test/tester_test.cpp.i
+.PHONY : test/tester_test.i
+
+# target to preprocess a source file
+test/tester_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/tester_test.cpp.i
+.PHONY : test/tester_test.cpp.i
+
+test/tester_test.s: test/tester_test.cpp.s
+.PHONY : test/tester_test.s
+
+# target to generate assembly for a file
+test/tester_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/tester_test.cpp.s
+.PHONY : test/tester_test.cpp.s
+
+test/tree_root_test.o: test/tree_root_test.cpp.o
+.PHONY : test/tree_root_test.o
+
+# target to build an object file
+test/tree_root_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/tree_root_test.cpp.o
+.PHONY : test/tree_root_test.cpp.o
+
+test/tree_root_test.i: test/tree_root_test.cpp.i
+.PHONY : test/tree_root_test.i
+
+# target to preprocess a source file
+test/tree_root_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/tree_root_test.cpp.i
+.PHONY : test/tree_root_test.cpp.i
+
+test/tree_root_test.s: test/tree_root_test.cpp.s
+.PHONY : test/tree_root_test.s
+
+# target to generate assembly for a file
+test/tree_root_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/tree_root_test.cpp.s
+.PHONY : test/tree_root_test.cpp.s
+
+test/utils_test.o: test/utils_test.cpp.o
+.PHONY : test/utils_test.o
+
+# target to build an object file
+test/utils_test.cpp.o:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/utils_test.cpp.o
+.PHONY : test/utils_test.cpp.o
+
+test/utils_test.i: test/utils_test.cpp.i
+.PHONY : test/utils_test.i
+
+# target to preprocess a source file
+test/utils_test.cpp.i:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/utils_test.cpp.i
+.PHONY : test/utils_test.cpp.i
+
+test/utils_test.s: test/utils_test.cpp.s
+.PHONY : test/utils_test.s
+
+# target to generate assembly for a file
+test/utils_test.cpp.s:
+	$(MAKE) -f CMakeFiles/MTF_TEST.dir/build.make CMakeFiles/MTF_TEST.dir/test/utils_test.cpp.s
+.PHONY : test/utils_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -265,6 +689,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MTF"
+	@echo "... MTF_TEST"
+	@echo "... test"
+	@echo "... MTF_GTEST"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... algorithm"
 	@echo "... configuration"
 	@echo "... data_managment"
@@ -274,9 +705,51 @@ help:
 	@echo "... result"
 	@echo "... tool"
 	@echo "... util"
+	@echo "... gtest/gtest_main.o"
+	@echo "... gtest/gtest_main.i"
+	@echo "... gtest/gtest_main.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... main_test.o"
+	@echo "... main_test.i"
+	@echo "... main_test.s"
+	@echo "... test/data_collector_test.o"
+	@echo "... test/data_collector_test.i"
+	@echo "... test/data_collector_test.s"
+	@echo "... test/database_test.o"
+	@echo "... test/database_test.i"
+	@echo "... test/database_test.s"
+	@echo "... test/element_test.o"
+	@echo "... test/element_test.i"
+	@echo "... test/element_test.s"
+	@echo "... test/event_notifier_test.o"
+	@echo "... test/event_notifier_test.i"
+	@echo "... test/event_notifier_test.s"
+	@echo "... test/file_data_provider_test.o"
+	@echo "... test/file_data_provider_test.i"
+	@echo "... test/file_data_provider_test.s"
+	@echo "... test/judge_collector_test.o"
+	@echo "... test/judge_collector_test.i"
+	@echo "... test/judge_collector_test.s"
+	@echo "... test/move_to_front_test.o"
+	@echo "... test/move_to_front_test.i"
+	@echo "... test/move_to_front_test.s"
+	@echo "... test/mtf_matrix_test.o"
+	@echo "... test/mtf_matrix_test.i"
+	@echo "... test/mtf_matrix_test.s"
+	@echo "... test/proccessor_test.o"
+	@echo "... test/proccessor_test.i"
+	@echo "... test/proccessor_test.s"
+	@echo "... test/tester_test.o"
+	@echo "... test/tester_test.i"
+	@echo "... test/tester_test.s"
+	@echo "... test/tree_root_test.o"
+	@echo "... test/tree_root_test.i"
+	@echo "... test/tree_root_test.s"
+	@echo "... test/utils_test.o"
+	@echo "... test/utils_test.i"
+	@echo "... test/utils_test.s"
 .PHONY : help
 
 

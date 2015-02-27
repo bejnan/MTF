@@ -26,19 +26,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/banaszewski/git/MTF/src
+CMAKE_SOURCE_DIR = /home/j_banaszewski/git/MTF/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/banaszewski/git/MTF/build
+CMAKE_BINARY_DIR = /home/j_banaszewski/git/MTF/build
 
 # Include any dependencies generated for this target.
 include exceptions/CMakeFiles/exception.dir/depend.make
@@ -49,65 +49,42 @@ include exceptions/CMakeFiles/exception.dir/progress.make
 # Include the compile flags for this target's objects.
 include exceptions/CMakeFiles/exception.dir/flags.make
 
-exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o: exceptions/CMakeFiles/exception.dir/flags.make
-exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o: /home/banaszewski/git/MTF/src/exceptions/file_path_exception.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/file_path_exception.cpp.o -c /home/banaszewski/git/MTF/src/exceptions/file_path_exception.cpp
+exceptions/CMakeFiles/exception.dir/database_exception.cpp.o: exceptions/CMakeFiles/exception.dir/flags.make
+exceptions/CMakeFiles/exception.dir/database_exception.cpp.o: /home/j_banaszewski/git/MTF/src/exceptions/database_exception.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object exceptions/CMakeFiles/exception.dir/database_exception.cpp.o"
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/database_exception.cpp.o -c /home/j_banaszewski/git/MTF/src/exceptions/database_exception.cpp
 
-exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exception.dir/file_path_exception.cpp.i"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/exceptions/file_path_exception.cpp > CMakeFiles/exception.dir/file_path_exception.cpp.i
+exceptions/CMakeFiles/exception.dir/database_exception.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exception.dir/database_exception.cpp.i"
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/exceptions/database_exception.cpp > CMakeFiles/exception.dir/database_exception.cpp.i
 
-exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exception.dir/file_path_exception.cpp.s"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/exceptions/file_path_exception.cpp -o CMakeFiles/exception.dir/file_path_exception.cpp.s
+exceptions/CMakeFiles/exception.dir/database_exception.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exception.dir/database_exception.cpp.s"
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/exceptions/database_exception.cpp -o CMakeFiles/exception.dir/database_exception.cpp.s
 
-exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.requires:
-.PHONY : exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.requires
+exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.requires:
+.PHONY : exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.requires
 
-exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.provides: exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.requires
-	$(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.provides.build
-.PHONY : exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.provides
+exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.provides: exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.requires
+	$(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.provides.build
+.PHONY : exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.provides
 
-exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.provides.build: exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o
-
-exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o: exceptions/CMakeFiles/exception.dir/flags.make
-exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o: /home/banaszewski/git/MTF/src/exceptions/non_existing_element.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/non_existing_element.cpp.o -c /home/banaszewski/git/MTF/src/exceptions/non_existing_element.cpp
-
-exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exception.dir/non_existing_element.cpp.i"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/exceptions/non_existing_element.cpp > CMakeFiles/exception.dir/non_existing_element.cpp.i
-
-exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exception.dir/non_existing_element.cpp.s"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/exceptions/non_existing_element.cpp -o CMakeFiles/exception.dir/non_existing_element.cpp.s
-
-exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.requires:
-.PHONY : exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.requires
-
-exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.provides: exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.requires
-	$(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.provides.build
-.PHONY : exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.provides
-
-exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.provides.build: exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o
+exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.provides.build: exceptions/CMakeFiles/exception.dir/database_exception.cpp.o
 
 exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o: exceptions/CMakeFiles/exception.dir/flags.make
-exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o: /home/banaszewski/git/MTF/src/exceptions/data_provider_exception.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_3)
+exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o: /home/j_banaszewski/git/MTF/src/exceptions/data_provider_exception.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/data_provider_exception.cpp.o -c /home/banaszewski/git/MTF/src/exceptions/data_provider_exception.cpp
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/data_provider_exception.cpp.o -c /home/j_banaszewski/git/MTF/src/exceptions/data_provider_exception.cpp
 
 exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exception.dir/data_provider_exception.cpp.i"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/exceptions/data_provider_exception.cpp > CMakeFiles/exception.dir/data_provider_exception.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/exceptions/data_provider_exception.cpp > CMakeFiles/exception.dir/data_provider_exception.cpp.i
 
 exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exception.dir/data_provider_exception.cpp.s"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/exceptions/data_provider_exception.cpp -o CMakeFiles/exception.dir/data_provider_exception.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/exceptions/data_provider_exception.cpp -o CMakeFiles/exception.dir/data_provider_exception.cpp.s
 
 exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o.requires:
 .PHONY : exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o.requires
@@ -119,18 +96,18 @@ exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o.provides: exce
 exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o.provides.build: exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o
 
 exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o: exceptions/CMakeFiles/exception.dir/flags.make
-exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o: /home/banaszewski/git/MTF/src/exceptions/invalid_name_exception.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_4)
+exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o: /home/j_banaszewski/git/MTF/src/exceptions/invalid_name_exception.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/invalid_name_exception.cpp.o -c /home/banaszewski/git/MTF/src/exceptions/invalid_name_exception.cpp
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/invalid_name_exception.cpp.o -c /home/j_banaszewski/git/MTF/src/exceptions/invalid_name_exception.cpp
 
 exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exception.dir/invalid_name_exception.cpp.i"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/exceptions/invalid_name_exception.cpp > CMakeFiles/exception.dir/invalid_name_exception.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/exceptions/invalid_name_exception.cpp > CMakeFiles/exception.dir/invalid_name_exception.cpp.i
 
 exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exception.dir/invalid_name_exception.cpp.s"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/exceptions/invalid_name_exception.cpp -o CMakeFiles/exception.dir/invalid_name_exception.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/exceptions/invalid_name_exception.cpp -o CMakeFiles/exception.dir/invalid_name_exception.cpp.s
 
 exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o.requires:
 .PHONY : exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o.requires
@@ -141,65 +118,19 @@ exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o.provides: excep
 
 exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o.provides.build: exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o
 
-exceptions/CMakeFiles/exception.dir/database_exception.cpp.o: exceptions/CMakeFiles/exception.dir/flags.make
-exceptions/CMakeFiles/exception.dir/database_exception.cpp.o: /home/banaszewski/git/MTF/src/exceptions/database_exception.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object exceptions/CMakeFiles/exception.dir/database_exception.cpp.o"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/database_exception.cpp.o -c /home/banaszewski/git/MTF/src/exceptions/database_exception.cpp
-
-exceptions/CMakeFiles/exception.dir/database_exception.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exception.dir/database_exception.cpp.i"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/exceptions/database_exception.cpp > CMakeFiles/exception.dir/database_exception.cpp.i
-
-exceptions/CMakeFiles/exception.dir/database_exception.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exception.dir/database_exception.cpp.s"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/exceptions/database_exception.cpp -o CMakeFiles/exception.dir/database_exception.cpp.s
-
-exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.requires:
-.PHONY : exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.requires
-
-exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.provides: exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.requires
-	$(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.provides.build
-.PHONY : exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.provides
-
-exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.provides.build: exceptions/CMakeFiles/exception.dir/database_exception.cpp.o
-
-exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o: exceptions/CMakeFiles/exception.dir/flags.make
-exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o: /home/banaszewski/git/MTF/src/exceptions/element_already_exists.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/element_already_exists.cpp.o -c /home/banaszewski/git/MTF/src/exceptions/element_already_exists.cpp
-
-exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exception.dir/element_already_exists.cpp.i"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/exceptions/element_already_exists.cpp > CMakeFiles/exception.dir/element_already_exists.cpp.i
-
-exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exception.dir/element_already_exists.cpp.s"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/exceptions/element_already_exists.cpp -o CMakeFiles/exception.dir/element_already_exists.cpp.s
-
-exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.requires:
-.PHONY : exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.requires
-
-exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.provides: exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.requires
-	$(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.provides.build
-.PHONY : exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.provides
-
-exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.provides.build: exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o
-
 exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o: exceptions/CMakeFiles/exception.dir/flags.make
-exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o: /home/banaszewski/git/MTF/src/exceptions/end_of_file_exception.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_7)
+exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o: /home/j_banaszewski/git/MTF/src/exceptions/end_of_file_exception.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/end_of_file_exception.cpp.o -c /home/banaszewski/git/MTF/src/exceptions/end_of_file_exception.cpp
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/end_of_file_exception.cpp.o -c /home/j_banaszewski/git/MTF/src/exceptions/end_of_file_exception.cpp
 
 exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exception.dir/end_of_file_exception.cpp.i"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/exceptions/end_of_file_exception.cpp > CMakeFiles/exception.dir/end_of_file_exception.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/exceptions/end_of_file_exception.cpp > CMakeFiles/exception.dir/end_of_file_exception.cpp.i
 
 exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exception.dir/end_of_file_exception.cpp.s"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/exceptions/end_of_file_exception.cpp -o CMakeFiles/exception.dir/end_of_file_exception.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/exceptions/end_of_file_exception.cpp -o CMakeFiles/exception.dir/end_of_file_exception.cpp.s
 
 exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o.requires:
 .PHONY : exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o.requires
@@ -211,18 +142,18 @@ exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o.provides: except
 exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o.provides.build: exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o
 
 exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o: exceptions/CMakeFiles/exception.dir/flags.make
-exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o: /home/banaszewski/git/MTF/src/exceptions/invalid_index_exception.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_8)
+exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o: /home/j_banaszewski/git/MTF/src/exceptions/invalid_index_exception.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/invalid_index_exception.cpp.o -c /home/banaszewski/git/MTF/src/exceptions/invalid_index_exception.cpp
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/invalid_index_exception.cpp.o -c /home/j_banaszewski/git/MTF/src/exceptions/invalid_index_exception.cpp
 
 exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exception.dir/invalid_index_exception.cpp.i"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/banaszewski/git/MTF/src/exceptions/invalid_index_exception.cpp > CMakeFiles/exception.dir/invalid_index_exception.cpp.i
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/exceptions/invalid_index_exception.cpp > CMakeFiles/exception.dir/invalid_index_exception.cpp.i
 
 exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exception.dir/invalid_index_exception.cpp.s"
-	cd /home/banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/banaszewski/git/MTF/src/exceptions/invalid_index_exception.cpp -o CMakeFiles/exception.dir/invalid_index_exception.cpp.s
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/exceptions/invalid_index_exception.cpp -o CMakeFiles/exception.dir/invalid_index_exception.cpp.s
 
 exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o.requires:
 .PHONY : exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o.requires
@@ -233,53 +164,122 @@ exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o.provides: exce
 
 exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o.provides.build: exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o
 
+exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o: exceptions/CMakeFiles/exception.dir/flags.make
+exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o: /home/j_banaszewski/git/MTF/src/exceptions/element_already_exists.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o"
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/element_already_exists.cpp.o -c /home/j_banaszewski/git/MTF/src/exceptions/element_already_exists.cpp
+
+exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exception.dir/element_already_exists.cpp.i"
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/exceptions/element_already_exists.cpp > CMakeFiles/exception.dir/element_already_exists.cpp.i
+
+exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exception.dir/element_already_exists.cpp.s"
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/exceptions/element_already_exists.cpp -o CMakeFiles/exception.dir/element_already_exists.cpp.s
+
+exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.requires:
+.PHONY : exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.requires
+
+exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.provides: exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.requires
+	$(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.provides.build
+.PHONY : exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.provides
+
+exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.provides.build: exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o
+
+exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o: exceptions/CMakeFiles/exception.dir/flags.make
+exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o: /home/j_banaszewski/git/MTF/src/exceptions/file_path_exception.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o"
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/file_path_exception.cpp.o -c /home/j_banaszewski/git/MTF/src/exceptions/file_path_exception.cpp
+
+exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exception.dir/file_path_exception.cpp.i"
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/exceptions/file_path_exception.cpp > CMakeFiles/exception.dir/file_path_exception.cpp.i
+
+exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exception.dir/file_path_exception.cpp.s"
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/exceptions/file_path_exception.cpp -o CMakeFiles/exception.dir/file_path_exception.cpp.s
+
+exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.requires:
+.PHONY : exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.requires
+
+exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.provides: exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.requires
+	$(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.provides.build
+.PHONY : exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.provides
+
+exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.provides.build: exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o
+
+exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o: exceptions/CMakeFiles/exception.dir/flags.make
+exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o: /home/j_banaszewski/git/MTF/src/exceptions/non_existing_element.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/j_banaszewski/git/MTF/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o"
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/exception.dir/non_existing_element.cpp.o -c /home/j_banaszewski/git/MTF/src/exceptions/non_existing_element.cpp
+
+exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exception.dir/non_existing_element.cpp.i"
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/j_banaszewski/git/MTF/src/exceptions/non_existing_element.cpp > CMakeFiles/exception.dir/non_existing_element.cpp.i
+
+exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exception.dir/non_existing_element.cpp.s"
+	cd /home/j_banaszewski/git/MTF/build/exceptions && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/j_banaszewski/git/MTF/src/exceptions/non_existing_element.cpp -o CMakeFiles/exception.dir/non_existing_element.cpp.s
+
+exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.requires:
+.PHONY : exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.requires
+
+exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.provides: exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.requires
+	$(MAKE) -f exceptions/CMakeFiles/exception.dir/build.make exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.provides.build
+.PHONY : exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.provides
+
+exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.provides.build: exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o
+
 # Object files for target exception
 exception_OBJECTS = \
-"CMakeFiles/exception.dir/file_path_exception.cpp.o" \
-"CMakeFiles/exception.dir/non_existing_element.cpp.o" \
+"CMakeFiles/exception.dir/database_exception.cpp.o" \
 "CMakeFiles/exception.dir/data_provider_exception.cpp.o" \
 "CMakeFiles/exception.dir/invalid_name_exception.cpp.o" \
-"CMakeFiles/exception.dir/database_exception.cpp.o" \
-"CMakeFiles/exception.dir/element_already_exists.cpp.o" \
 "CMakeFiles/exception.dir/end_of_file_exception.cpp.o" \
-"CMakeFiles/exception.dir/invalid_index_exception.cpp.o"
+"CMakeFiles/exception.dir/invalid_index_exception.cpp.o" \
+"CMakeFiles/exception.dir/element_already_exists.cpp.o" \
+"CMakeFiles/exception.dir/file_path_exception.cpp.o" \
+"CMakeFiles/exception.dir/non_existing_element.cpp.o"
 
 # External object files for target exception
 exception_EXTERNAL_OBJECTS =
 
-exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o
-exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o
+exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/database_exception.cpp.o
 exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o
 exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o
-exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/database_exception.cpp.o
-exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o
 exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o
 exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o
+exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o
+exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o
+exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o
 exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/build.make
 exceptions/libexception.a: exceptions/CMakeFiles/exception.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libexception.a"
-	cd /home/banaszewski/git/MTF/build/exceptions && $(CMAKE_COMMAND) -P CMakeFiles/exception.dir/cmake_clean_target.cmake
-	cd /home/banaszewski/git/MTF/build/exceptions && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/exception.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/j_banaszewski/git/MTF/build/exceptions && $(CMAKE_COMMAND) -P CMakeFiles/exception.dir/cmake_clean_target.cmake
+	cd /home/j_banaszewski/git/MTF/build/exceptions && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/exception.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 exceptions/CMakeFiles/exception.dir/build: exceptions/libexception.a
 .PHONY : exceptions/CMakeFiles/exception.dir/build
 
-exceptions/CMakeFiles/exception.dir/requires: exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.requires
-exceptions/CMakeFiles/exception.dir/requires: exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.requires
+exceptions/CMakeFiles/exception.dir/requires: exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.requires
 exceptions/CMakeFiles/exception.dir/requires: exceptions/CMakeFiles/exception.dir/data_provider_exception.cpp.o.requires
 exceptions/CMakeFiles/exception.dir/requires: exceptions/CMakeFiles/exception.dir/invalid_name_exception.cpp.o.requires
-exceptions/CMakeFiles/exception.dir/requires: exceptions/CMakeFiles/exception.dir/database_exception.cpp.o.requires
-exceptions/CMakeFiles/exception.dir/requires: exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.requires
 exceptions/CMakeFiles/exception.dir/requires: exceptions/CMakeFiles/exception.dir/end_of_file_exception.cpp.o.requires
 exceptions/CMakeFiles/exception.dir/requires: exceptions/CMakeFiles/exception.dir/invalid_index_exception.cpp.o.requires
+exceptions/CMakeFiles/exception.dir/requires: exceptions/CMakeFiles/exception.dir/element_already_exists.cpp.o.requires
+exceptions/CMakeFiles/exception.dir/requires: exceptions/CMakeFiles/exception.dir/file_path_exception.cpp.o.requires
+exceptions/CMakeFiles/exception.dir/requires: exceptions/CMakeFiles/exception.dir/non_existing_element.cpp.o.requires
 .PHONY : exceptions/CMakeFiles/exception.dir/requires
 
 exceptions/CMakeFiles/exception.dir/clean:
-	cd /home/banaszewski/git/MTF/build/exceptions && $(CMAKE_COMMAND) -P CMakeFiles/exception.dir/cmake_clean.cmake
+	cd /home/j_banaszewski/git/MTF/build/exceptions && $(CMAKE_COMMAND) -P CMakeFiles/exception.dir/cmake_clean.cmake
 .PHONY : exceptions/CMakeFiles/exception.dir/clean
 
 exceptions/CMakeFiles/exception.dir/depend:
-	cd /home/banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/banaszewski/git/MTF/src /home/banaszewski/git/MTF/src/exceptions /home/banaszewski/git/MTF/build /home/banaszewski/git/MTF/build/exceptions /home/banaszewski/git/MTF/build/exceptions/CMakeFiles/exception.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/j_banaszewski/git/MTF/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/j_banaszewski/git/MTF/src /home/j_banaszewski/git/MTF/src/exceptions /home/j_banaszewski/git/MTF/build /home/j_banaszewski/git/MTF/build/exceptions /home/j_banaszewski/git/MTF/build/exceptions/CMakeFiles/exception.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : exceptions/CMakeFiles/exception.dir/depend
 

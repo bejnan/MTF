@@ -1,0 +1,2 @@
+/usr/bin/ar cq libevent.a  CMakeFiles/event.dir/event_notifier.cpp.o
+/usr/bin/ranlib libevent.a
