@@ -1,0 +1,2 @@
+/usr/bin/ar cq libelement.a  CMakeFiles/element.dir/element.cpp.o CMakeFiles/element.dir/complex_difference_element.cpp.o CMakeFiles/element.dir/simple_element.cpp.o
+/usr/bin/ranlib libelement.a

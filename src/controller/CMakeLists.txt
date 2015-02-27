@@ -1,0 +1,3 @@
+add_library(configuration analysis_runner.cpp configuration/configuration.cpp configuration/objects_builder.cpp)
+target_link_libraries (configuration LINK_PUBLIC algorithm)
+target_include_directories (configuration PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

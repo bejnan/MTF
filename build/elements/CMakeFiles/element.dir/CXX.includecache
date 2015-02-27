@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/banaszewski/git/MTF/src/elements/complex_difference_element.cpp
+../elements/complex_difference_element.h
+/home/banaszewski/git/MTF/src/elements/complex_difference_element.h
+
+/home/banaszewski/git/MTF/src/elements/complex_difference_element.h
+../elements/simple_element.h
+/home/banaszewski/git/MTF/src/elements/simple_element.h
+
+/home/banaszewski/git/MTF/src/elements/element.cpp
+../elements/element.h
+/home/banaszewski/git/MTF/src/elements/element.h
+
+/home/banaszewski/git/MTF/src/elements/element.h
+memory
+-
+
+/home/banaszewski/git/MTF/src/elements/simple_element.cpp
+../elements/simple_element.h
+/home/banaszewski/git/MTF/src/elements/simple_element.h
+typeinfo
+-
+algorithm
+-
+
+/home/banaszewski/git/MTF/src/elements/simple_element.h
+../elements/element.h
+/home/banaszewski/git/MTF/src/elements/element.h
+

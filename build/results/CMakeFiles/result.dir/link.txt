@@ -1,0 +1,2 @@
+/usr/bin/ar cq libresult.a  CMakeFiles/result.dir/result.cpp.o CMakeFiles/result.dir/overall_result.cpp.o
+/usr/bin/ranlib libresult.a

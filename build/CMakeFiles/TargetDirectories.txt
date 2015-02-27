@@ -1,0 +1,10 @@
+/home/banaszewski/git/MTF/build/events/CMakeFiles/event.dir
+/home/banaszewski/git/MTF/build/utils/CMakeFiles/util.dir
+/home/banaszewski/git/MTF/build/controller/CMakeFiles/configuration.dir
+/home/banaszewski/git/MTF/build/CMakeFiles/MTF.dir
+/home/banaszewski/git/MTF/build/data_managment/CMakeFiles/data_managment.dir
+/home/banaszewski/git/MTF/build/algorithms/CMakeFiles/algorithm.dir
+/home/banaszewski/git/MTF/build/exceptions/CMakeFiles/exception.dir
+/home/banaszewski/git/MTF/build/elements/CMakeFiles/element.dir
+/home/banaszewski/git/MTF/build/tools/CMakeFiles/tool.dir
+/home/banaszewski/git/MTF/build/results/CMakeFiles/result.dir

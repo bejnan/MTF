@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>MTF-Debug@build</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.make.core.makeBuilder</name>
+			<triggers>clean,full,incremental,</triggers>
+			<arguments>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.cleanBuildTarget</key>
+					<value>clean</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableCleanBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.append_environment</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.stopOnError</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enabledIncrementalBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.command</key>
+					<value>/usr/bin/make</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.contents</key>
+					<value>org.eclipse.cdt.make.core.activeConfigSettings</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.target.inc</key>
+					<value>all</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.arguments</key>
+					<value>-j2</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildLocation</key>
+					<value>/home/banaszewski/git/MTF/build</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
+					<value>false</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.environment</key>
+					<value>VERBOSE=1|CMAKE_NO_VERBOSE=1|</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableFullBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.target.auto</key>
+					<value>all</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableAutoBuild</key>
+					<value>false</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.target.clean</key>
+					<value>clean</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.fullBuildTarget</key>
+					<value>all</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildArguments</key>
+					<value></value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.location</key>
+					<value>/home/banaszewski/git/MTF/build</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.autoBuildTarget</key>
+					<value>all</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.core.errorOutputParser</key>
+					<value>org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;</value>
+				</dictionary>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.make.core.ScannerConfigBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.cdt.make.core.makeNature</nature>
+		<nature>org.eclipse.cdt.make.core.ScannerConfigNature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[Source directory]</name>
+			<type>2</type>
+			<location>/home/banaszewski/git/MTF/src</location>
+		</link>
+		<link>
+			<name>[Subprojects]</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Subprojects]/MTF</name>
+			<type>2</type>
+			<location>/home/banaszewski/git/MTF/src</location>
+		</link>
+		<link>
+			<name>[Targets]</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF/Source Files/main.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/main.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm/Source Files/algorithm_container.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/algorithms/algorithm_container.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm/Source Files/mtf_matrix.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/algorithms/matrix/mtf_matrix.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm/Source Files/move_to_front.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/algorithms/move_to_front/move_to_front.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm/Source Files/random_tree_root.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/algorithms/tree/random_tree_root.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm/Source Files/tree_root.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/algorithms/tree/tree_root.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] configuration</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] configuration/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] configuration/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] configuration/Source Files/analysis_runner.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/controller/analysis_runner.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] configuration/Source Files/configuration.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/controller/configuration/configuration.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] configuration/Source Files/objects_builder.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/controller/configuration/objects_builder.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] configuration/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] configuration/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] configuration/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] configuration/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/Source Files/database.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/data_managment/database.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/Source Files/csv_data_output.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/data_managment/data_output/csv_data_output.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/Source Files/csv_file_data_output.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/data_managment/data_output/csv_file_data_output.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/Source Files/file_data_output.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/data_managment/data_output/file_data_output.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/Source Files/file_data_provider.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/data_managment/data_provider/file_data_provider.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/Source Files/data_collector.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/data_managment/results_collectors/data_collector.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/Source Files/judge_collector.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/data_managment/results_collectors/judge_collector.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/Source Files/result_collector.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/data_managment/results_collectors/result_collector.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] data_managment/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] event</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] event/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] event/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] event/Source Files/event_notifier.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/events/event_notifier.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] event/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] event/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] event/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] event/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Source Files/file_path_exception.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/exceptions/file_path_exception.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Source Files/non_existing_element.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/exceptions/non_existing_element.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Source Files/data_provider_exception.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/exceptions/data_provider_exception.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Source Files/invalid_name_exception.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/exceptions/invalid_name_exception.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Source Files/database_exception.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/exceptions/database_exception.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Source Files/element_already_exists.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/exceptions/element_already_exists.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Source Files/end_of_file_exception.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/exceptions/end_of_file_exception.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Source Files/invalid_index_exception.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/exceptions/invalid_index_exception.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] element</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] element/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] element/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] element/Source Files/element.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/elements/element.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] element/Source Files/complex_difference_element.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/elements/complex_difference_element.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] element/Source Files/simple_element.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/elements/simple_element.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] element/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] element/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] element/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] element/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] result</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] result/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] result/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] result/Source Files/result.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/results/result.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] result/Source Files/overall_result.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/results/overall_result.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] result/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] result/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] result/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] result/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] tool</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] tool/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] tool/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] tool/Source Files/processor_factory.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/tools/processor_factory.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] tool/Source Files/processor.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/tools/processor.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] tool/Source Files/deviation_judge.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/tools/judges/deviation_judge.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] tool/Source Files/tester.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/tools/judges/tester.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] tool/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] tool/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] tool/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] tool/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] util</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] util/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] util/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] util/Source Files/utils.cpp</name>
+			<type>1</type>
+			<location>/home/banaszewski/git/MTF/src/utils/utils.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] util/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] util/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] util/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] util/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

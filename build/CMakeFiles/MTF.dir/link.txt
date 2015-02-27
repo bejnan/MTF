@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/MTF.dir/main.cpp.o  -o MTF -rdynamic algorithms/libalgorithm.a controller/libconfiguration.a data_managment/libdata_managment.a elements/libelement.a events/libevent.a exceptions/libexception.a results/libresult.a tools/libtool.a utils/libutil.a algorithms/libalgorithm.a 

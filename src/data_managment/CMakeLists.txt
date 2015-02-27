@@ -1,0 +1,2 @@
+add_library(data_managment database.cpp data_output/csv_data_output.cpp data_output/csv_file_data_output.cpp data_output/file_data_output.cpp data_provider/file_data_provider.cpp results_collectors/data_collector.cpp results_collectors/judge_collector.cpp results_collectors/result_collector.cpp)
+target_include_directories (data_managment PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

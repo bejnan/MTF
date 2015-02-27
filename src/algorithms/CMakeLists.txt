@@ -1,0 +1,2 @@
+add_library(algorithm algorithm_container.cpp matrix/mtf_matrix.cpp move_to_front/move_to_front.cpp tree/random_tree_root.cpp tree/tree_root.cpp)
+target_include_directories (algorithm PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

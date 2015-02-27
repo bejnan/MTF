@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/banaszewski/git/MTF/src/utils/utils.cpp
+utils.h
+/home/banaszewski/git/MTF/src/utils/utils.h
+
+/home/banaszewski/git/MTF/src/utils/utils.h
+string
+-
+sstream
+-
+iomanip
+-
+
