@@ -12,5 +12,7 @@
 #include "../algorithms/matrix_algorithms.h"
 #include "../algorithms/move_to_front_algorithms.h"
 #include "../algorithms/algorithm_container.h"
+#include "../algorithms/ialgorithm.h"
+#include "../algorithms/new_algorithms/mtfalgorithm.h"
 
 #endif /* ALGORITHMS_H_ */

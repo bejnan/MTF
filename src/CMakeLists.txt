@@ -5,10 +5,6 @@ add_definitions(-std=c++11)
 find_package(Boost COMPONENTS system filesystem unit_test_framework REQUIRED)
 include_directories ("${PROJECT_SOURCE_DIR}/headers")
 
-add_subdirectory(gmock)
-enable_testing()
-include_directories(${PROJECT_SOURCE_DIR}/gmock/gtest/include ${PROJECT_SOURCE_DIR}/gmock/include ${PROJECT_SOURCE_DIR}/gmock/ ${PROJECT_SOURCE_DIR}/gmock/gtest)
-
 add_subdirectory (algorithms)
 add_subdirectory (controller)
 add_subdirectory (data_managment)
@@ -31,6 +27,9 @@ target_link_libraries (MTF_TEST LINK_PUBLIC algorithm configuration data_managme
                        ${Boost_SYSTEM_LIBRARY}
                        ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
 
-add_executable(MTF_GTEST gtest/gtest_main.cpp)
-target_link_libraries(MTF_GTEST gtest gtest_main)
+enable_testing()
+include_directories(${PROJECT_SOURCE_DIR}/gmock/gtest/include ${PROJECT_SOURCE_DIR}/gmock/gtest ${PROJECT_SOURCE_DIR}/gmock/include ${PROJECT_SOURCE_DIR}/gmock)
+file(GLOB_RECURSE gtest_source "gtest/*.cpp")
+add_executable(MTF_GTEST ${gtest_source})
+target_link_libraries(MTF_GTEST LINK_PUBLIC algorithm configuration data_managment element event exception result tool util gtest gtest_main)
 add_test(MTF_GTEST MTF_GTEST)

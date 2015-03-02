@@ -47,7 +47,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.buildLocation</key>
-					<value>/home/j_banaszewski/git/MTF/build</value>
+					<value>/home/banaszewski/git/MTF/build</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
@@ -83,7 +83,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.build.location</key>
-					<value>/home/j_banaszewski/git/MTF/build</value>
+					<value>/home/banaszewski/git/MTF/build</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.autoBuildTarget</key>
@@ -122,16 +122,6 @@
 			<name>[Subprojects]/MTF</name>
 			<type>2</type>
 			<location>/home/j_banaszewski/git/MTF/src</location>
-		</link>
-		<link>
-			<name>[Subprojects]/gmock</name>
-			<type>2</type>
-			<location>/home/j_banaszewski/git/MTF/src/gmock</location>
-		</link>
-		<link>
-			<name>[Subprojects]/gtest</name>
-			<type>2</type>
-			<location>/home/j_banaszewski/git/MTF/src/gmock/gtest</location>
 		</link>
 		<link>
 			<name>[Targets]</name>
@@ -199,31 +189,6 @@
 			<location>/home/j_banaszewski/git/MTF/src/main_test.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] MTF_TEST/Source Files/database_test.cpp</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/test/database_test.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] MTF_TEST/Source Files/move_to_front_test.cpp</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/test/move_to_front_test.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] MTF_TEST/Source Files/judge_collector_test.cpp</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/test/judge_collector_test.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] MTF_TEST/Source Files/mtf_matrix_test.cpp</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/test/mtf_matrix_test.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] MTF_TEST/Source Files/data_collector_test.cpp</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/test/data_collector_test.cpp</location>
-		</link>
-		<link>
 			<name>[Targets]/[exe] MTF_TEST/Source Files/event_notifier_test.cpp</name>
 			<type>1</type>
 			<location>/home/j_banaszewski/git/MTF/src/test/event_notifier_test.cpp</location>
@@ -234,14 +199,19 @@
 			<location>/home/j_banaszewski/git/MTF/src/test/utils_test.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] MTF_TEST/Source Files/element_test.cpp</name>
+			<name>[Targets]/[exe] MTF_TEST/Source Files/move_to_front_test.cpp</name>
 			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/test/element_test.cpp</location>
+			<location>/home/j_banaszewski/git/MTF/src/test/move_to_front_test.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] MTF_TEST/Source Files/tester_test.cpp</name>
 			<type>1</type>
 			<location>/home/j_banaszewski/git/MTF/src/test/tester_test.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF_TEST/Source Files/data_collector_test.cpp</name>
+			<type>1</type>
+			<location>/home/j_banaszewski/git/MTF/src/test/data_collector_test.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] MTF_TEST/Source Files/file_data_provider_test.cpp</name>
@@ -254,9 +224,29 @@
 			<location>/home/j_banaszewski/git/MTF/src/test/tree_root_test.cpp</location>
 		</link>
 		<link>
+			<name>[Targets]/[exe] MTF_TEST/Source Files/element_test.cpp</name>
+			<type>1</type>
+			<location>/home/j_banaszewski/git/MTF/src/test/element_test.cpp</location>
+		</link>
+		<link>
 			<name>[Targets]/[exe] MTF_TEST/Source Files/proccessor_test.cpp</name>
 			<type>1</type>
 			<location>/home/j_banaszewski/git/MTF/src/test/proccessor_test.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF_TEST/Source Files/mtf_matrix_test.cpp</name>
+			<type>1</type>
+			<location>/home/j_banaszewski/git/MTF/src/test/mtf_matrix_test.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF_TEST/Source Files/database_test.cpp</name>
+			<type>1</type>
+			<location>/home/j_banaszewski/git/MTF/src/test/database_test.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF_TEST/Source Files/judge_collector_test.cpp</name>
+			<type>1</type>
+			<location>/home/j_banaszewski/git/MTF/src/test/judge_collector_test.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] MTF_TEST/Header Files</name>
@@ -294,9 +284,14 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[exe] MTF_GTEST/Source Files/gtest_main.cpp</name>
+			<name>[Targets]/[exe] MTF_GTEST/Source Files/analysis_runner_test.cpp</name>
 			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/gtest/gtest_main.cpp</location>
+			<location>/home/j_banaszewski/git/MTF/src/gtest/analysis_runner_test.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] MTF_GTEST/Source Files/MTFAlgorithm_test.cpp</name>
+			<type>1</type>
+			<location>/home/j_banaszewski/git/MTF/src/gtest/MTFAlgorithm_test.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] MTF_GTEST/Header Files</name>
@@ -315,181 +310,6 @@
 		</link>
 		<link>
 			<name>[Targets]/[exe] MTF_GTEST/Object Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock/</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock/Source Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock/Source Files/gtest-all.cc</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/gmock/gtest/src/gtest-all.cc</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock/Source Files/gmock-all.cc</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/gmock/src/gmock-all.cc</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock/Header Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock/CMake Rules</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock/Resources</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock/Object Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock_main</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock_main/</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock_main/Source Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock_main/Source Files/gtest-all.cc</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/gmock/gtest/src/gtest-all.cc</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock_main/Source Files/gmock-all.cc</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/gmock/src/gmock-all.cc</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock_main/Source Files/gmock_main.cc</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/gmock/src/gmock_main.cc</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock_main/Header Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock_main/CMake Rules</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock_main/Resources</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gmock_main/Object Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest/</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest/Source Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest/Source Files/gtest-all.cc</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/gmock/gtest/src/gtest-all.cc</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest/Header Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest/CMake Rules</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest/Resources</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest/Object Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest_main</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest_main/</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest_main/Source Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest_main/Source Files/gtest_main.cc</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/gmock/gtest/src/gtest_main.cc</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest_main/Header Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest_main/CMake Rules</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest_main/Resources</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] gtest_main/Object Files</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -532,6 +352,11 @@
 			<name>[Targets]/[lib] algorithm/Source Files/tree_root.cpp</name>
 			<type>1</type>
 			<location>/home/j_banaszewski/git/MTF/src/algorithms/tree/tree_root.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] algorithm/Source Files/mtfalgorithm.cpp</name>
+			<type>1</type>
+			<location>/home/j_banaszewski/git/MTF/src/algorithms/new_algorithms/mtfalgorithm.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[lib] algorithm/Header Files</name>
@@ -734,9 +559,14 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[lib] exception/Source Files/database_exception.cpp</name>
+			<name>[Targets]/[lib] exception/Source Files/file_path_exception.cpp</name>
 			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/exceptions/database_exception.cpp</location>
+			<location>/home/j_banaszewski/git/MTF/src/exceptions/file_path_exception.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Source Files/non_existing_element.cpp</name>
+			<type>1</type>
+			<location>/home/j_banaszewski/git/MTF/src/exceptions/non_existing_element.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[lib] exception/Source Files/data_provider_exception.cpp</name>
@@ -749,6 +579,16 @@
 			<location>/home/j_banaszewski/git/MTF/src/exceptions/invalid_name_exception.cpp</location>
 		</link>
 		<link>
+			<name>[Targets]/[lib] exception/Source Files/database_exception.cpp</name>
+			<type>1</type>
+			<location>/home/j_banaszewski/git/MTF/src/exceptions/database_exception.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] exception/Source Files/element_already_exists.cpp</name>
+			<type>1</type>
+			<location>/home/j_banaszewski/git/MTF/src/exceptions/element_already_exists.cpp</location>
+		</link>
+		<link>
 			<name>[Targets]/[lib] exception/Source Files/end_of_file_exception.cpp</name>
 			<type>1</type>
 			<location>/home/j_banaszewski/git/MTF/src/exceptions/end_of_file_exception.cpp</location>
@@ -757,21 +597,6 @@
 			<name>[Targets]/[lib] exception/Source Files/invalid_index_exception.cpp</name>
 			<type>1</type>
 			<location>/home/j_banaszewski/git/MTF/src/exceptions/invalid_index_exception.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] exception/Source Files/element_already_exists.cpp</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/exceptions/element_already_exists.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] exception/Source Files/file_path_exception.cpp</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/exceptions/file_path_exception.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] exception/Source Files/non_existing_element.cpp</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/exceptions/non_existing_element.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[lib] exception/Header Files</name>
@@ -814,14 +639,14 @@
 			<location>/home/j_banaszewski/git/MTF/src/elements/element.cpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[lib] element/Source Files/simple_element.cpp</name>
-			<type>1</type>
-			<location>/home/j_banaszewski/git/MTF/src/elements/simple_element.cpp</location>
-		</link>
-		<link>
 			<name>[Targets]/[lib] element/Source Files/complex_difference_element.cpp</name>
 			<type>1</type>
 			<location>/home/j_banaszewski/git/MTF/src/elements/complex_difference_element.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] element/Source Files/simple_element.cpp</name>
+			<type>1</type>
+			<location>/home/j_banaszewski/git/MTF/src/elements/simple_element.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[lib] element/Header Files</name>
