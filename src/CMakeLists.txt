@@ -22,7 +22,7 @@ target_link_libraries (MTF LINK_PUBLIC algorithm configuration data_managment el
 
 file(GLOB_RECURSE test_source "test/*.cpp")
 add_executable(MTF_TEST main_test.cpp ${test_source})
-target_link_libraries (MTF_TEST LINK_PUBLIC algorithm configuration data_managment element event exception result tool util 
+target_link_libraries (MTF_TEST LINK_PUBLIC algorithm configuration data_managment element event exception result tool util
 				 	   ${Boost_FILESYSTEM_LIBRARY}
                        ${Boost_SYSTEM_LIBRARY}
                        ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})

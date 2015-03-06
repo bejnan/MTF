@@ -13,7 +13,7 @@ using namespace ::testing;
 namespace algorithm
 {
 
-class MtfAlgorithmTestSuite: Test
+class MtfAlgorithmTestSuite: public Test
 {
 public:
 	MTFAlgorithm algorithm;

@@ -14,5 +14,6 @@
 #include "../algorithms/algorithm_container.h"
 #include "../algorithms/ialgorithm.h"
 #include "../algorithms/new_algorithms/mtfalgorithm.h"
+#include "../algorithms/new_algorithms/matrix.h"
 
 #endif /* ALGORITHMS_H_ */
